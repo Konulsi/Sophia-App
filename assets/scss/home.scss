@@ -12,6 +12,12 @@
     z-index: 2;
 }
 
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
 #nav-up {
     background: #222 !important;
 
@@ -63,18 +69,17 @@
                     color: black;
                     width: 100%;
                     font-size: 17px;
+                    line-height: 35px;
                 }
 
                 .sidebar-pages-list {
                     padding: 30px;
-                    width: 245px;
+                    width: 100%;
                     background-color: white;
                     position: absolute;
                     left: 0px;
-                    top: 300px;
-                    height: 200px;
+                    top: 270px;
                     z-index: 1;
-                    overflow: scroll;
                     transition: all 0.4s;
                 }
             }
@@ -602,6 +607,53 @@ body {
 
 
 
+#info-bar{
+    .info-bar-area{
+        border: 1px solid #00000017;
+        .cardd{
+            height: 150px;
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 21px;
+        i{
+            color: #EF6C00;
+            font-size: 41px;
+            margin-right: 10px;
+            line-height: 65px;
+            clear: both;
+            width: auto;
+            padding: 0 3px;
+        }
+        .card-body{
+            p{
+                font-weight: 600;
+                font-size: 14.5px;
+                font-family: Roboto,Helvetica Neue,sans-serif;
+            }
+            span{
+                font-family: Roboto,Helvetica Neue,sans-serif;
+                font-size: 14px;
+                color: #777!important;
+            }
+           
+        }
+        .border{
+            width: 1px;
+            height: 120px;
+            color: black;
+        }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
 
 
 
@@ -699,7 +751,7 @@ body {
 
 
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
     #nav-up {
         height: 80px;
 
@@ -754,5 +806,9 @@ body {
                 margin-right: 190px;
             }
         }
+    }
+
+    .border{
+        display: none !important;
     }
 }
