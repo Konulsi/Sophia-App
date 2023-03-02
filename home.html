@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/scss/home.css">
     <title>Document</title>
@@ -12,42 +13,65 @@
 
 <body>
 
-
+    <div id="overlay"></div>
     <header>
         <section id="nav-up">
             <div class="container">
                 <div class="up">
                     <i class="fa-solid fa-bars hamburger-menu d-lg-none"></i>
-                    <div class="sidebar">
-                        <div class="box">
-                            <i class="fa-solid fa-xmark x-icon"></i>
-                            <hr>
-                            <div class="sidebar-list hide-sidebar">
-                                <a href=""><p>Home</p></a>
-                                <a href=""><p>Contact</p></a>
-                               <a href=""><p>About</p></a>
-                                <a href=""><p>Blog</p></a>
-                                
-                                <div class="sidebar-pages">
-                                    <a href="">PAGES</a>
-                                    <i class="fa-solid fa-sort-down"></i>
-                                </div>
-                                <div class="sidebar-pages-list d-none">
-                                    <a href=""><p>Home</p></a>
-                                    <a href=""><p>Contact</p></a>
-                                   <a href=""><p>About</p></a>
-                                    <a href=""><p>Blog</p></a>
-                                   <a href=""><p>Basket</p></a>
-                                   <a href=""><p>Wishlist</p></a>
-                                   <a href=""><p>Cart</p></a>
-                                   <a href=""><p>PoductDetail</p></a>
-                                    <a href=""><p>Checkout</p></a>
-                                </div>
+                    <div class="sidebar d-lg-none hide-sidebar ">
+                        <i class="fa-solid fa-xmark x-icon"></i>
+                        <hr>
+                        <div class="sidebar-list ">
+                            <a href="">
+                                <p>Home</p>
+                            </a>
+                            <a href="">
+                                <p>Contact</p>
+                            </a>
+                            <a href="">
+                                <p>About</p>
+                            </a>
+                            <a href="">
+                                <p>Blog</p>
+                            </a>
+
+                            <div class="sidebar-pages">
+                                <a href="">Pages</a>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="sidebar-pages-list d-none">
+                                <a href="">
+                                    <p>Home</p>
+                                </a>
+                                <a href="">
+                                    <p>Contact</p>
+                                </a>
+                                <a href="">
+                                    <p>About</p>
+                                </a>
+                                <a href="">
+                                    <p>Blog</p>
+                                </a>
+                                <a href="">
+                                    <p>Basket</p>
+                                </a>
+                                <a href="">
+                                    <p>Wishlist</p>
+                                </a>
+                                <a href="">
+                                    <p>Cart</p>
+                                </a>
+                                <a href="">
+                                    <p>PoductDetail</p>
+                                </a>
+                                <a href="">
+                                    <p>Checkout</p>
+                                </a>
                             </div>
                         </div>
+
                     </div>
-
-
                     <div class="left">
                         <div class="currency">
                             <span>USD</span>
@@ -83,7 +107,7 @@
                         </div>
 
                         <div class="compare">
-                            <a href=""><i class="fa-solid fa-code-compare"></i></a>
+                            <a href=""><i class="fa-solid fa-arrows-rotate"></i></a>
                             <a href="">COMPARE</a>
                         </div>
 
@@ -114,10 +138,10 @@
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 ">
                         <div class="cal-bucket">
-                        
+
                             <div class="div-icon">
                                 <i class="fa-solid fa-phone"></i>
-                            </div>                           
+                            </div>
                             <div class="div-phone">
                                 <p>Helpline:</p>
                                 <span>02(981)336 111</span>
@@ -126,7 +150,7 @@
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="count">0</span>
                                 <span>$0.00</span>
-    
+
                             </div>
 
                         </div>
@@ -154,15 +178,33 @@
                         <i class="fa-solid fa-sort-down"></i>
                     </div>
                     <div class="pages-list d-none">
-                        <a href=""><p>Home</p></a>
-                        <a href=""><p>Contact</p></a>
-                       <a href=""><p>About</p></a>
-                        <a href=""><p>Blog</p></a>
-                       <a href=""><p>Basket</p></a>
-                       <a href=""><p>Wishlist</p></a>
-                       <a href=""><p>Cart</p></a>
-                       <a href=""><p>PoductDetail</p></a>
-                        <a href=""><p>Checkout</p></a>
+                        <a href="">
+                            <p>Home</p>
+                        </a>
+                        <a href="">
+                            <p>Contact</p>
+                        </a>
+                        <a href="">
+                            <p>About</p>
+                        </a>
+                        <a href="">
+                            <p>Blog</p>
+                        </a>
+                        <a href="">
+                            <p>Basket</p>
+                        </a>
+                        <a href="">
+                            <p>Wishlist</p>
+                        </a>
+                        <a href="">
+                            <p>Cart</p>
+                        </a>
+                        <a href="">
+                            <p>PoductDetail</p>
+                        </a>
+                        <a href="">
+                            <p>Checkout</p>
+                        </a>
                     </div>
                     <div class="blog item">
                         <a href="">BLOG</a>
@@ -180,7 +222,53 @@
 
 
 
+    <main>
 
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/img/headphone.jpg" alt="">
+                    <h1>HUGE SALE</h1>
+                    <h3>Up to 70%</h3>
+                    <button class="shop">SHOP NOW</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/img/watch2.jpg" alt="">
+                    <h1 class="sale">BIGGEST DISCOUNT</h1>
+                    <h3 class="text">Check the promotion</h3>
+                    <button class="shop">SHOP NOW</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/img/phone1.jpg" alt="">
+                    <h1 class="sale">BIGGEST SALE</h1>
+                    <h3>Dont miss it</h3>
+                    <button class="shop">SHOP NOW</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/img/comp.jpg" alt="">
+                    <h1>OUR BEST PRODUCTS</h1>
+                    <h3>Special selection</h3>
+                    <button class="shop">SHOP NOW</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/img/watch.jpg" alt="">
+                    <h1>MASSIVE SALE</h1>
+                    <h3>Only for today</h3>
+                    <button class="shop">SHOP NOW</button>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
