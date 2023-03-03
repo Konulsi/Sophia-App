@@ -61,14 +61,17 @@ $(document).ready(function () {
     })
 
 
+
+    //overlay
+
+    $(document).on("click", "#overlay", function () {
+        console.log($(this));
+        $(".sidebar").addClass("hide-sidebar");
+        $("#overlay").css("display", "none")
+    })
+
+
     //icons
-
-
-
-
-
-
-
 
 
 
@@ -78,8 +81,8 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+            delay: 2500,
+            disableOnInteraction: false,
         },
         pagination: {
             el: ".swiper-pagination",
@@ -92,6 +95,73 @@ $(document).ready(function () {
     });
 
 
+
+
+    
+    //tab-menu //Tabs Action
+const tabLink = document.querySelectorAll(".tab-menu-link");
+const tabContent = document.querySelectorAll(".tab-bar-content");
+
+tabLink.forEach((item) => {
+  item.addEventListener("click", activeTab);
+});
+
+function activeTab(item) {
+  const btnTarget = item.currentTarget;
+  const content = btnTarget.dataset.content;
+
+  tabContent.forEach((item) => {
+    item.classList.remove("is-active");
+  });
+
+  tabLink.forEach((item) => {
+    item.classList.remove("is-active");
+  });
+
+  document.querySelector("#" + content).classList.add("is-active");
+  btnTarget.classList.add("is-active");
+}
+
+
+
+
+
+
+$('.cards').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
 
 
 
