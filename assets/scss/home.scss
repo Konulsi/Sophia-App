@@ -12,10 +12,7 @@
     z-index: 2;
 }
 
-.containerr {
-    width: 83% !important;
-    margin: 0 auto !important;
-}
+
 
 p {
     margin: 0;
@@ -1086,6 +1083,104 @@ body {
     }
 
 }
+
+
+
+//featured-product
+
+#featured-product {
+    margin-top: 50px;
+
+    .carts {
+        display: flex;
+
+        .cart1 {
+
+            width: 100%;
+
+            h4 {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 0.0625rem;
+                    bottom: -0.65625rem;
+                    background-color: #f6f6f6;
+                }
+
+                &:after {
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    width: 2.5rem;
+                    height: 0.125rem;
+                    background-color: #222;
+                    bottom: -0.6875rem;
+                }
+            }
+        }
+
+        .img-text {
+            display: flex;
+
+            .img {
+                margin-top: 10px;
+
+                img {
+                    height: 90px;
+                    width: 90px;
+                    background-color: #F5F5F5;
+                }
+            }
+
+            .texts {
+
+                .text1 {
+                    a{
+                        text-decoration: none;
+                        p {
+                            margin-top: 6px;
+                            margin-left: 10px;
+                            font-weight: bold;
+                            margin-bottom: 3px;
+                            color: black;
+                        }
+                    }
+                    
+                }
+
+                .icons {
+                    margin-left: 10px;
+                    display: flex;
+                    font-size: 12px;
+                }
+
+                .text2 {
+
+                    p {
+                        margin-left: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
