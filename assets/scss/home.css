@@ -563,6 +563,9 @@ body {
   color: #9194a1;
 }
 
+.main span {
+  color: #736c6c;
+}
 .main .tab {
   width: 100%;
   height: auto;
@@ -705,124 +708,356 @@ body {
 .product-card .add-btn button i {
   color: white;
 }
-.product-card .slick-arrow.slick-hidden {
-  display: block !important;
+
+#banners .new-laptops {
+  position: relative;
+  background: #eee;
+  background-image: url(../img/laptop.png);
+  background-repeat: no-repeat;
+  width: 562px;
+  height: 450px;
+  text-align: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  border-radius: 4px;
 }
+#banners .new-laptops a {
+  position: absolute;
+  top: 67px;
+  left: 21px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #383838;
+}
+#banners .new-laptops h4 {
+  top: 25px;
+  left: 21px;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d2a25;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+#banners .new-laptops p {
+  position: absolute;
+  top: 53px;
+  left: 21px;
+  color: #383838;
+}
+#banners .tablet {
+  position: relative;
+  bottom: 3px !important;
+  background-image: url(../img/tablet.png);
+  width: 265px;
+  height: 161px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: #333;
+  padding: 20px;
+  background-position: 50%;
+  border-radius: 5px;
+}
+#banners .tablet h4 {
+  position: absolute;
+  width: 130px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d2a25;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  left: 26px;
+  top: 31px;
+}
+#banners .tablet p {
+  font-size: 15px;
+  left: 26px;
+  top: 100px;
+  position: absolute;
+  color: #383838;
+}
+#banners .tablet a {
+  position: absolute;
+  left: 26px;
+  top: 127px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #383838;
+}
+#banners .cameras {
+  background-image: url(../img/cameras.png);
+  width: 265px;
+  height: 161px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: #333;
+  padding: 20px;
+  background-position: 50%;
+  border-radius: 5px;
+  position: relative;
+}
+#banners .cameras h4 {
+  position: absolute;
+  width: 122px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d2a25;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  left: 26px;
+  top: 26px;
+}
+#banners .cameras p {
+  font-size: 15px;
+  left: 26px;
+  top: 100px;
+  position: absolute;
+  color: #383838;
+}
+#banners .cameras a {
+  position: absolute;
+  left: 26px;
+  top: 127px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #383838;
+}
+#banners .offer-cameras {
+  background: #eee;
+  background-image: url(../img/mobiles\ \(1\).png);
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 556px;
+  height: 275px;
+  position: relative;
+  top: 15px;
+  border-radius: 5px;
+  color: #333;
+}
+#banners .offer-cameras h2 {
+  height: 100px;
+  width: 200px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #2d2a25;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  position: relative;
+  top: 42px;
+  left: 28px;
+}
+#banners .offer-cameras p {
+  font-size: 16px;
+  left: 31px;
+  top: 168px;
+  position: absolute;
+  color: #383838;
+}
+#banners .offer-cameras .btn-price {
+  background-color: #ef6c00;
+  color: #383838;
+  font-size: 19px;
+  font-weight: 700;
+  border-color: #ef6c00;
+  width: 135px;
+  cursor: pointer;
+  height: 45px;
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+}
+
 @media (max-width: 576px) {
-  .product-card .right {
+  .right {
     display: none !important;
   }
-  .product-card #nav-up {
+  #nav-up {
     height: 80px;
   }
-  .product-card #nav-up .up {
+  #nav-up .up {
     justify-content: center !important;
   }
-  .product-card #nav-up .up .left .language span {
+  #nav-up .up .left .language span {
     display: none !important;
   }
-  .product-card #nav-up .up .left .language i {
+  #nav-up .up .left .language i {
     position: absolute;
     left: -15px;
     top: 3px;
   }
-  .product-card #nav-area .logo {
+  #nav-area .logo {
     display: flex !important;
     justify-content: center !important;
   }
-  .product-card #nav-area .cal-bucket {
+  #nav-area .cal-bucket {
     bottom: 30px;
   }
-  .product-card #nav-area .cal-bucket .cart-phone {
+  #nav-area .cal-bucket .cart-phone {
     margin-left: 15px;
   }
-  .product-card #nav-area .cal-bucket .div-icon {
+  #nav-area .cal-bucket .div-icon {
     margin-left: 16px;
   }
-  .product-card #nav-area .cal-bucket .cart {
-    margin-right: 120px;
+  #nav-area .cal-bucket .cart {
+    margin-right: 85px;
   }
-  .product-card .swiper-slide .shop {
+  .swiper-slide .shop {
     width: 180px;
     bottom: 30px;
     left: 15px;
   }
-  .product-card .swiper-slide h3 {
+  .swiper-slide h3 {
     bottom: 75px;
     left: 16px !important;
   }
-  .product-card .swiper-slide h1 {
+  .swiper-slide h1 {
     position: absolute;
     top: 33px !important;
     left: 15px !important;
     font-size: 29px !important;
   }
-  .product-card .swiper-slide .sale {
+  .swiper-slide .sale {
     top: 11px !important;
     width: 100px !important;
     font-size: 29px !important;
   }
-  .product-card .swiper-slide .text {
+  .swiper-slide .text {
     font-size: 24px;
   }
+  .main .tab .tab-menu-link {
+    width: 35% !important;
+  }
+  .main .tab .tab-menu-link span {
+    font-size: 14px;
+    color: #736c6c;
+  }
+  #banners .new-laptops {
+    width: 513px;
+  }
+  #banners .right2 .tablet {
+    margin-top: 10px;
+    width: 513px;
+  }
+  #banners .right2 .cameras {
+    margin-top: 10px;
+    width: 513px;
+  }
+  #banners .right2 .offer-cameras {
+    margin-top: 10px;
+    width: 513px;
+  }
 }
-@media only screen and (min-width: 576px) and (max-width: 768px) {
-  .product-card #nav-up {
+@media (min-width: 576px) and (max-width: 768px) {
+  #nav-up {
     height: 80px;
   }
-  .product-card #nav-up .left {
+  #nav-up .left {
     left: 90px;
   }
-  .product-card #nav-up .left .language span {
+  #nav-up .left .language span {
     display: none !important;
   }
-  .product-card #nav-up .left .language i {
+  #nav-up .left .language i {
     position: absolute;
     left: -15px;
     top: 3px;
   }
-  .product-card #nav-area .input-area {
+  #nav-area .input-area {
     position: relative;
     bottom: 30px;
   }
-  .product-card #nav-area .input-area input {
+  #nav-area .input-area input {
     width: 60%;
   }
-  .product-card #nav-area .input-area .btn-search {
+  #nav-area .input-area .btn-search {
     width: 100px;
   }
-  .product-card #nav-area .logo {
+  #nav-area .logo {
     display: flex !important;
     justify-content: center !important;
   }
-  .product-card #nav-area .cal-bucket {
+  #nav-area .cal-bucket {
     bottom: 40px;
   }
-  .product-card #nav-area .cal-bucket .cart-phone {
+  #nav-area .cal-bucket .cart-phone {
     margin-left: 15px;
   }
-  .product-card #nav-area .cal-bucket .div-icon {
+  #nav-area .cal-bucket .div-icon {
     margin-left: 130px;
   }
-  .product-card #nav-area .cal-bucket .cart {
-    margin-right: 190px;
+  #nav-area .cal-bucket .cart {
+    margin-right: 130px;
   }
-  .product-card .swiper-slide .shop {
+  .swiper-slide .shop {
     width: 180px;
     bottom: 30px;
     left: 15px;
   }
-  .product-card .swiper-slide h3 {
+  .swiper-slide h3 {
     bottom: 75px;
     left: 16px !important;
   }
-  .product-card .swiper-slide h1 {
+  .swiper-slide h1 {
     position: absolute;
     top: 114px !important;
     left: 15px !important;
     font-size: 29px !important;
   }
-  .product-card .swiper-slide .text {
+  .swiper-slide .text {
     font-size: 33px;
+  }
+  .main .tab .tab-menu-link {
+    width: 27% !important;
+  }
+  .main .tab .tab-menu-link span {
+    font-size: 13px;
+    color: #736c6c;
+  }
+  #banners .new-laptops {
+    width: 700px;
+  }
+  #banners .right2 {
+    position: relative;
+    bottom: 336px;
+  }
+  #banners .offer-cameras {
+    width: 331px;
+    top: 26px;
+    height: 332px;
+    background-size: cover;
+    background-position: 50%;
+  }
+  #banners .offer-cameras h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  #banners .offer-cameras p {
+    top: 146px;
+  }
+  #banners .offer-cameras .btn-price {
+    bottom: 106px !important;
+    height: 47px;
+    width: 108px !important;
+  }
+  #banners .tablet {
+    top: 350px;
+    width: 357px;
+    left: 342px;
+  }
+  #banners .cameras {
+    left: 342px;
+    width: 357px;
+    top: 358px;
   }
 }/*# sourceMappingURL=home.css.map */

@@ -698,6 +698,9 @@ body {
 }
 
 .main {
+    span{
+        color: #736c6c;
+    }
     .tab {
         width: 100%;
         height: auto;
@@ -877,122 +880,232 @@ body {
 
 
 
-    .slick-arrow.slick-hidden {
-        display: block !important;
+    // .slick-arrow.slick-hidden {
+    //     display: block !important;
 
-    }
-
-
+    // }
 
 
 
+ 
+}
 
 
 
+//banners
 
+#banners {
+    .new-laptops {
+        position: relative;
+        background: #eee;
+        background-image: url(../img/laptop.png);
+        background-repeat: no-repeat;
+        width: 562px;
+        height: 450px;
+        text-align: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        border-radius: 4px;
 
-
-    //responsivlik
-
-    @media (max-width: 576px) {
-        .right {
-            display: none !important;
-        }
-
-        #nav-up {
-            height: 80px;
-
-            .up {
-                justify-content: center !important;
-
-
-                .left {
-                    .language {
-                        span {
-                            display: none !important;
-                        }
-
-                        i {
-                            position: absolute;
-                            left: -15px;
-                            top: 3px;
-                        }
-                    }
-
-                }
-
-            }
-        }
-
-
-        #nav-area {
-
-
-            .logo {
-                display: flex !important;
-                justify-content: center !important;
-            }
-
-            .cal-bucket {
-                bottom: 30px;
-
-                .cart-phone {
-                    margin-left: 15px;
-                }
-
-                .div-icon {
-                    margin-left: 16px;
-                }
-
-                .cart {
-                    margin-right: 120px;
-                }
-            }
-        }
-
-        //slider
-        .swiper-slide .shop {
-            width: 180px;
-            bottom: 30px;
-            left: 15px;
-        }
-
-        .swiper-slide h3 {
-            bottom: 75px;
-            left: 16px !important;
-
-
-
-        }
-
-        .swiper-slide h1 {
+        a {
             position: absolute;
-            top: 33px !important;
-            left: 15px !important;
-            font-size: 29px !important;
-        }
-
-        .swiper-slide .sale {
-            top: 11px !important;
-            width: 100px !important;
-            font-size: 29px !important;
+            top: 67px;
+            left: 21px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 15px;
+            color: #383838;
 
         }
 
-        .swiper-slide .text {
-            font-size: 24px;
+        h4 {
+            top: 25px;
+            left: 21px;
+            position: absolute;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d2a25;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+
+        }
+
+        p {
+            position: absolute;
+            top: 53px;
+            left: 21px;
+            color: #383838;
         }
     }
 
+    .tablet {
+        position: relative;
+
+        bottom: 3px !important;
+        background-image: url(../img/tablet.png);
+        width: 265px;
+        height: 161px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: left;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        color: #333;
+        padding: 20px;
+        background-position: 50%;
+        border-radius: 5px;
+
+        h4 {
+            position: absolute;
+            width: 130px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d2a25;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            left: 26px;
+            top: 31px;
+        }
+
+        p {
+            font-size: 15px;
+            left: 26px;
+            top: 100px;
+            position: absolute;
+            color: #383838;
+        }
+
+        a {
+            position: absolute;
+            left: 26px;
+            top: 127px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #383838;
+        }
+    }
+
+    .cameras {
+        background-image: url(../img/cameras.png);
+        width: 265px;
+        height: 161px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: left;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        color: #333;
+        padding: 20px;
+        background-position: 50%;
+        border-radius: 5px;
+        position: relative;
+
+        h4 {
+            position: absolute;
+            width: 122px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d2a25;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            left: 26px;
+            top: 26px;
+        }
+
+        p {
+            font-size: 15px;
+            left: 26px;
+            top: 100px;
+            position: absolute;
+            color: #383838;
+        }
+
+        a {
+            position: absolute;
+            left: 26px;
+            top: 127px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #383838;
+        }
+
+    }
+
+    .offer-cameras {
+        background: #eee;
+        background-image: url(../img/mobiles\ \(1\).png);
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 556px;
+        height: 275px;
+        position: relative;
+        top: 15px;
+        border-radius: 5px;
+        color: #333;
+
+        h2 {
+            height: 100px;
+            width: 200px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #2d2a25;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            position: relative;
+            top: 42px;
+            left: 28px;
+        }
+
+        p {
+            font-size: 16px;
+            left: 31px;
+            top: 168px;
+            position: absolute;
+            color: #383838;
+        }
+
+        .btn-price {
+            background-color: #ef6c00;
+            color: #383838;
+            font-size: 19px;
+            font-weight: 700;
+            border-color: #ef6c00;
+            width: 135px;
+            cursor: pointer;
+            height: 45px;
+            position: absolute;
+            bottom: 16px;
+            left: 24px;
+        }
+
+    }
+
+}
 
 
-    @media only screen and (min-width: 576px) and (max-width: 768px) {
-        #nav-up {
-            height: 80px;
+
+
+
+   //responsivlik
+
+   @media (max-width: 576px) {
+    .right {
+        display: none !important;
+    }
+
+    #nav-up {
+        height: 80px;
+
+        .up {
+            justify-content: center !important;
+
 
             .left {
-                left: 90px;
-
                 .language {
                     span {
                         display: none !important;
@@ -1006,72 +1119,267 @@ body {
                 }
 
             }
+
+        }
+    }
+
+
+    #nav-area {
+
+
+        .logo {
+            display: flex !important;
+            justify-content: center !important;
         }
 
-        #nav-area {
-
-            .input-area {
-                position: relative;
-                bottom: 30px;
-
-                input {
-                    width: 60%;
-                }
-
-                .btn-search {
-                    width: 100px;
-                }
-            }
-
-            .logo {
-                display: flex !important;
-                justify-content: center !important;
-            }
-
-            .cal-bucket {
-                bottom: 40px;
-
-                .cart-phone {
-                    margin-left: 15px;
-                }
-
-                .div-icon {
-                    margin-left: 130px;
-                }
-
-                .cart {
-                    margin-right: 190px;
-                }
-            }
-        }
-
-        //slider-response
-
-
-        .swiper-slide .shop {
-            width: 180px;
+        .cal-bucket {
             bottom: 30px;
-            left: 15px;
+
+            .cart-phone {
+                margin-left: 15px;
+            }
+
+            .div-icon {
+                margin-left: 16px;
+            }
+
+            .cart {
+                margin-right: 85px;
+            }
         }
+    }
 
-        .swiper-slide h3 {
-            bottom: 75px;
-            left: 16px !important;
+    //slider
+    .swiper-slide .shop {
+        width: 180px;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .swiper-slide h3 {
+        bottom: 75px;
+        left: 16px !important;
 
 
-
-        }
-
-        .swiper-slide h1 {
-            position: absolute;
-            top: 114px !important;
-            left: 15px !important;
-            font-size: 29px !important;
-        }
-
-        .swiper-slide .text {
-            font-size: 33px;
-        }
 
     }
+
+    .swiper-slide h1 {
+        position: absolute;
+        top: 33px !important;
+        left: 15px !important;
+        font-size: 29px !important;
+    }
+
+    .swiper-slide .sale {
+        top: 11px !important;
+        width: 100px !important;
+        font-size: 29px !important;
+
+    }
+
+    .swiper-slide .text {
+        font-size: 24px;
+    }
+
+
+
+    //tab-menu
+    .main{
+        .tab{
+            .tab-menu-link{
+                width: 35% !important;
+                span{
+                    font-size: 14px;
+    color: #736c6c;
+                }
+            }
+        }
+       
+    }
+
+    //banner-response#
+    #banners {
+        .new-laptops {
+            width: 513px;
+        }
+      .right2{
+        .tablet {
+            margin-top: 10px;
+            width: 513px;
+        }
+
+        .cameras {
+            margin-top: 10px;
+            width: 513px;
+        }
+
+        .offer-cameras {
+            margin-top: 10px;
+            width: 513px;
+        }
+      }
+       
+    }
+
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #nav-up {
+        height: 80px;
+
+        .left {
+            left: 90px;
+
+            .language {
+                span {
+                    display: none !important;
+                }
+
+                i {
+                    position: absolute;
+                    left: -15px;
+                    top: 3px;
+                }
+            }
+
+        }
+    }
+
+    #nav-area {
+
+        .input-area {
+            position: relative;
+            bottom: 30px;
+
+            input {
+                width: 60%;
+            }
+
+            .btn-search {
+                width: 100px;
+            }
+        }
+
+        .logo {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .cal-bucket {
+            bottom: 40px;
+
+            .cart-phone {
+                margin-left: 15px;
+            }
+
+            .div-icon {
+                margin-left: 130px;
+            }
+
+            .cart {
+                margin-right: 130px;
+            }
+        }
+    }
+
+    //slider-response
+
+
+    .swiper-slide .shop {
+        width: 180px;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .swiper-slide h3 {
+        bottom: 75px;
+        left: 16px !important;
+
+
+
+    }
+
+    .swiper-slide h1 {
+        position: absolute;
+        top: 114px !important;
+        left: 15px !important;
+        font-size: 29px !important;
+    }
+
+    .swiper-slide .text {
+        font-size: 33px;
+    }
+
+
+    //tab-menu
+    .main{
+        .tab{
+            .tab-menu-link{
+                width: 27% !important;
+                span{
+                    font-size: 13px; 
+                    color: #736c6c;
+                }
+            }
+        }
+    }
+
+      
+//baners-response
+#banners {
+    
+    .new-laptops {
+        width: 700px;
+    }
+  .right2{
+    position: relative;
+bottom: 336px;
+  }
+    .offer-cameras {
+     
+        width: 331px;
+        top: 26px;
+        height: 332px;
+        background-size: cover;
+        background-position: 50%;
+
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        p {
+            top: 146px;
+        }
+
+        .btn-price {
+          
+         
+            bottom: 106px !important;
+            height: 47px;
+            width: 108px !important;
+        }
+    }
+    .tablet {
+        
+        top: 350px;
+        width: 357px;
+        left: 342px;
+    }
+
+    .cameras {
+       
+        
+        left: 342px;
+   
+        width: 357px;
+    top: 358px;
+
+    }
+}
+
 }
