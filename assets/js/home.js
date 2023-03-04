@@ -76,6 +76,29 @@ $(document).ready(function () {
 
 
 
+     //pages
+
+    $(document).on("click",".pages" , function(e){
+        e.preventDefault();
+        $(".pages-list").removeClass("d-none");
+    })
+   
+
+
+
+    //basket icon 
+
+
+
+    $(document).on("click", "#nav-area .cart", function (e) {
+        e.preventDefault()
+
+        $(".spCard-dropdown").toggleClass("d-none");
+
+
+    });
+
+
 
 
 
