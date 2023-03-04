@@ -376,9 +376,11 @@ p {
             right: 22px;
             top: 34px;
             transition: all 0.4s;
-            &:hover{
+
+            &:hover {
                 background-color: #d2700f;
             }
+
             i {
                 color: white;
                 font-size: 19px;
@@ -423,10 +425,10 @@ p {
         font-family: Roboto, Arial, Helvetica, sans-serif;
         box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
         z-index: 5;
-    
+
         a {
             text-decoration: none;
-    
+
             p {
                 top: 5px;
                 position: relative;
@@ -435,9 +437,9 @@ p {
                 font-weight: 500;
             }
         }
-    
+
         .count {
-    
+
             bottom: 73px;
             left: 180px;
             position: absolute;
@@ -445,14 +447,14 @@ p {
             font-size: 14px;
             font-weight: 500;
         }
-    
+
         .alert {
             height: 1px;
             position: relative;
             left: 26px;
             bottom: 12px;
         }
-    
+
     }
 }
 
@@ -505,10 +507,11 @@ p {
         .pages-list {
             display: flex;
             flex-direction: column;
+            z-index: 20;
             width: 200px;
             position: absolute;
             top: 60px;
-            left: 500px;
+            left: 465px;
             padding: 3px 0 3px 0;
 
             border: 1px solid white;
@@ -543,6 +546,107 @@ p {
 
 
 
+//main
+
+#title {
+    border-bottom: 1px solid #8080801a;
+
+    .page-title {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+
+        .left {
+            font-weight: 500;
+        }
+
+        .right {
+            ul {
+                display: flex;
+
+                li {
+                    &:nth-child(1) {
+                        margin-right: 10px;
+                    }
+
+                    &:nth-child(2) {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#intro {
+
+    .intro-content {
+        display: flex;
+        justify-content: space-between;
+
+        .about-us {
+            padding: 0 0 0 146px;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 36px;
+                line-height: 1;
+                letter-spacing: .02em;
+                font-weight: bold;
+                font-family: Roboto, Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                line-height: 26px;
+                font-family: Roboto, Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+}
+
+
+
+//accordion
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 200px;
+    border: 3px solid green; 
+  }
+  
+  .container{max-width:900px;margin:auto}.title{text-align:center;font-family:Arial;margin-top:50px;margin-bottom:50px}.accordion__item{margin-bottom:10px}.accordion__item__header{background-color:#CBEAFE;padding:15px;cursor:pointer;position:relative;color:#000;font-family:Arial;font-weight:400;font-size:20px}.accordion__item__header::before{height:15px;width:15px;content:"";position:absolute;right:15px;top:15px;transition:.5s all;transform:rotate(45deg);border-right:2px solid #000;border-bottom:2px solid #000}.accordion__item__header.active{background-color:#33a0ff;color:#fff;transition:.5s}.accordion__item__header.active::before{transform:rotate(-135deg);top:23px;border-right:2px solid #fff;border-bottom:2px solid #fff}.accordion__item__content{overflow-y:auto;padding:0;display:none}
+  
+  .testbtn {
+    border:1px solid #99cc44 !important;    
+    border-left:5px solid #99cc44 !important;     
+    border-right:5px solid #99cc44 !important;       
+    border-top:5px solid #99cc44 !important;     
+    border-bottom:5px solid #99cc44 !important;         
+    -webkit-border-radius: 25px;    
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .testbtn {   
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    margin: 1px !important;    
+    font-size: 18px;
+    }
+  }
 
 
 
@@ -555,10 +659,21 @@ p {
 
 
 
-
-
-
-
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
 
 //footer
 
@@ -652,10 +767,9 @@ p {
 
         .tel-box {
             display: flex;
-            justify-content: space-between;
 
-            .email {
-                margin-right: 75px;
+            .text {
+                padding-left: 10px;
             }
         }
 
@@ -684,6 +798,10 @@ p {
     }
 
 }
+
+
+
+
 
 
 
@@ -831,25 +949,28 @@ p {
     }
 
 
-    #footer{
-        .contact-us{
-            .tel-box{
-                .text{
+    #footer {
+        .contact-us {
+            .tel-box {
+                .text {
                     margin-right: 240px;
                 }
-                .email{
-                    p{
+
+                .email {
+                    p {
                         margin-right: 80px;
 
                     }
                 }
             }
-            .icons{
-                ul{
+
+            .icons {
+                ul {
                     justify-content: space-between;
                     margin-right: 350px;
                     margin-top: 20px;
-                    li{
+
+                    li {
                         height: 35px;
                         width: 35px;
                         text-align: center;
@@ -858,7 +979,7 @@ p {
                 }
             }
         }
-        
+
     }
 
 
@@ -1027,7 +1148,7 @@ p {
 
 
     //featured
-    .cols{
+    .cols {
         position: relative;
         bottom: 310px;
     }
@@ -1040,28 +1161,30 @@ p {
 
     }
 
-    #footer{
+    #footer {
         position: relative;
         bottom: 290px;
+
         .col2 {
             position: relative;
             bottom: 65px;
-    
+
             .contact-us {
-               .tel-box{
-                .text{
-                    p{
-                        margin-right: 65px;
+                .tel-box {
+                    .text {
+                        p {
+                            margin-right: 65px;
+                        }
                     }
                 }
-               }
+
                 .icons {
                     position: relative;
                     bottom: 17px;
-    
+
                     ul {
                         margin-right: 170px;
-    
+
                         li {
                             height: 35px;
                             width: 35px;
@@ -1072,15 +1195,6 @@ p {
             }
         }
     }
-   
+
 
 }
-
-
-
-
-
-
-
-
-

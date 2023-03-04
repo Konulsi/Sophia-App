@@ -75,11 +75,20 @@ $(document).ready(function () {
 
 
 
+
+     //pages
+
+    $(document).on("click",".pages" , function(e){
+        e.preventDefault();
+        $(".pages-list").removeClass("d-none");
+    })
    
 
 
 
     //basket icon 
+
+
 
     $(document).on("click", "#nav-area .cart", function (e) {
         e.preventDefault()
@@ -95,20 +104,39 @@ $(document).ready(function () {
 
 
 
+    function openCategory(evt, CategoryName) {
+        var i;
+        var x = document.getElementsByClassName("category");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        var activebtn = document.getElementsByClassName("testbtn");
+        for (i = 0; i < x.length; i++) {
+            activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+        }
+        document.getElementById(CategoryName).style.display = "block";
+        evt.currentTarget.className += " w3-theme-dark";
+      }
+      
+      var mybtn = document.getElementsByClassName("testbtn")[0];
+      mybtn.click();
+
+
+
+      
+if ($(".accordion__item__header").length > 0) {
+    var active = "active";
+    $(".accordion__item__header").click(function () {
+      $(this).toggleClass(active);
+      $(this).next("div").slideToggle(200);
+    });
+  }
+
+
+
 
 
   
-
-
-
-
-  
-
-
-
-
-
-
 
 
 

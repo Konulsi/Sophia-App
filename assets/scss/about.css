@@ -405,10 +405,11 @@ p {
 #nav-down .down .pages-list {
   display: flex;
   flex-direction: column;
+  z-index: 20;
   width: 200px;
   position: absolute;
   top: 60px;
-  left: 500px;
+  left: 465px;
   padding: 3px 0 3px 0;
   border: 1px solid white;
   border-radius: 5px;
@@ -432,6 +433,154 @@ p {
 }
 #nav-down .down .pages-list a p {
   margin-left: 15px;
+}
+
+#title {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1019607843);
+}
+#title .page-title {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+#title .page-title .left {
+  font-weight: 500;
+}
+#title .page-title .right ul {
+  display: flex;
+}
+#title .page-title .right ul li:nth-child(1) {
+  margin-right: 10px;
+}
+#title .page-title .right ul li:nth-child(2) {
+  margin-right: 10px;
+}
+#title .page-title .right ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#intro .intro-content {
+  display: flex;
+  justify-content: space-between;
+}
+#intro .intro-content .about-us {
+  padding: 0 0 0 146px;
+}
+#intro .intro-content .about-us h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+#intro .intro-content .about-us p {
+  line-height: 26px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-family: Arial;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.accordion__item {
+  margin-bottom: 10px;
+}
+
+.accordion__item__header {
+  background-color: #CBEAFE;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  color: #000;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.accordion__item__header::before {
+  height: 15px;
+  width: 15px;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: 0.5s all;
+  transform: rotate(45deg);
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.accordion__item__header.active {
+  background-color: #33a0ff;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.accordion__item__header.active::before {
+  transform: rotate(-135deg);
+  top: 23px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.accordion__item__content {
+  overflow-y: auto;
+  padding: 0;
+  display: none;
+}
+
+.testbtn {
+  border: 1px solid #99cc44 !important;
+  border-left: 5px solid #99cc44 !important;
+  border-right: 5px solid #99cc44 !important;
+  border-top: 5px solid #99cc44 !important;
+  border-bottom: 5px solid #99cc44 !important;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .testbtn {
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    margin: 1px !important;
+    font-size: 18px;
+  }
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 #footer {
@@ -502,10 +651,9 @@ p {
 }
 #footer .contact-us .tel-box {
   display: flex;
-  justify-content: space-between;
 }
-#footer .contact-us .tel-box .email {
-  margin-right: 75px;
+#footer .contact-us .tel-box .text {
+  padding-left: 10px;
 }
 #footer .contact-us .icons ul {
   display: flex;
@@ -756,4 +904,4 @@ p {
     width: 35px;
     padding-top: 5px;
   }
-}/*# sourceMappingURL=basket.css.map */
+}/*# sourceMappingURL=about.css.map */
