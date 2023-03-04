@@ -934,6 +934,98 @@ body {
   margin-top: 5px;
 }
 
+#footer {
+  background-color: #F7F7F7;
+}
+#footer .sophia {
+  margin-top: 55px;
+}
+#footer .sophia p {
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+#footer .sophia .link {
+  margin-top: 10px;
+}
+#footer .sophia .link a {
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+}
+#footer .services {
+  margin-top: 55px;
+}
+#footer .services h5 {
+  font-size: 22px;
+}
+#footer .service-list ul {
+  padding: 0px;
+  line-height: 35px;
+}
+#footer .service-list ul li a {
+  text-decoration: none;
+  color: black;
+}
+#footer .subscribe {
+  margin-top: 55px;
+}
+#footer .input {
+  margin-top: 15px;
+  height: 45px;
+  background: #fff;
+  font-size: 15px;
+  line-height: 42px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 0 65px 0 20px;
+  color: #777;
+}
+#footer button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 0 10px;
+  text-align: center;
+  z-index: 222;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 45px;
+  width: 100%;
+  background-color: #ef6c00;
+}
+#footer .contact-us {
+  margin-top: 55px;
+}
+#footer .contact-us .tel-box {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .contact-us .tel-box .email {
+  margin-right: 75px;
+}
+#footer .contact-us .icons ul {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 80px;
+  padding: 0;
+  margin-top: 35px;
+}
+#footer .contact-us .icons ul li {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding-top: 6px;
+}
+#footer .contact-us .icons ul li a {
+  color: black;
+}
+
 @media (max-width: 576px) {
   .right {
     display: none !important;
@@ -1012,6 +1104,23 @@ body {
   #banners .right2 .offer-cameras {
     margin-top: 10px;
     width: 513px;
+  }
+  #footer .contact-us .tel-box .text {
+    margin-right: 240px;
+  }
+  #footer .contact-us .tel-box .email p {
+    margin-right: 80px;
+  }
+  #footer .contact-us .icons ul {
+    justify-content: space-between;
+    margin-right: 350px;
+    margin-top: 20px;
+  }
+  #footer .contact-us .icons ul li {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    padding-top: 4px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -1115,5 +1224,36 @@ body {
     left: 342px;
     width: 357px;
     top: 358px;
+  }
+  .cols {
+    position: relative;
+    bottom: 310px;
+  }
+  .col1 {
+    position: relative;
+    bottom: 80px;
+  }
+  #footer {
+    position: relative;
+    bottom: 290px;
+  }
+  #footer .col2 {
+    position: relative;
+    bottom: 65px;
+  }
+  #footer .col2 .contact-us .tel-box .text p {
+    margin-right: 65px;
+  }
+  #footer .col2 .contact-us .icons {
+    position: relative;
+    bottom: 17px;
+  }
+  #footer .col2 .contact-us .icons ul {
+    margin-right: 170px;
+  }
+  #footer .col2 .contact-us .icons ul li {
+    height: 35px;
+    width: 35px;
+    padding-top: 5px;
   }
 }/*# sourceMappingURL=home.css.map */

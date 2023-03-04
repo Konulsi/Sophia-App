@@ -695,9 +695,10 @@ body {
 }
 
 .main {
-    span{
+    span {
         color: #736c6c;
     }
+
     .tab {
         width: 100%;
         height: auto;
@@ -884,7 +885,7 @@ body {
 
 
 
- 
+
 }
 
 
@@ -1139,8 +1140,9 @@ body {
             .texts {
 
                 .text1 {
-                    a{
+                    a {
                         text-decoration: none;
+
                         p {
                             margin-top: 6px;
                             margin-left: 10px;
@@ -1149,7 +1151,7 @@ body {
                             color: black;
                         }
                     }
-                    
+
                 }
 
                 .icons {
@@ -1174,6 +1176,130 @@ body {
 
 
 
+//footer
+
+#footer {
+    background-color: #F7F7F7;
+
+    .sophia {
+        margin-top: 55px;
+
+        p {
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .link {
+            margin-top: 10px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                margin-top: 5px;
+            }
+        }
+
+    }
+
+    .services {
+        margin-top: 55px;
+
+        h5 {
+
+            font-size: 22px;
+        }
+
+    }
+
+    .service-list {
+        ul {
+            padding: 0px;
+            line-height: 35px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+        }
+
+    }
+
+    .subscribe {
+        margin-top: 55px;
+
+    }
+
+    .input {
+        margin-top: 15px;
+        height: 45px;
+        background: #fff;
+        font-size: 15px;
+        line-height: 42px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        padding: 0 65px 0 20px;
+        color: #777;
+    }
+
+    button {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 20px;
+        padding: 0 10px;
+        text-align: center;
+        z-index: 222;
+        color: #fff;
+        border-radius: 3px;
+        line-height: 45px;
+        width: 100%;
+        background-color: #ef6c00;
+    }
+
+    .contact-us {
+        margin-top: 55px;
+
+        .tel-box {
+            display: flex;
+            justify-content: space-between;
+
+            .email {
+                margin-right: 75px;
+            }
+        }
+
+        .icons {
+            ul {
+                display: flex;
+                justify-content: space-around;
+                margin-right: 80px;
+                padding: 0;
+                margin-top: 35px;
+
+                li {
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    padding-top: 6px;
+
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 
 
@@ -1186,9 +1312,10 @@ body {
 
 
 
-   //responsivlik
 
-   @media (max-width: 576px) {
+//responsivlik
+
+@media (max-width: 576px) {
     .right {
         display: none !important;
     }
@@ -1280,17 +1407,18 @@ body {
 
 
     //tab-menu
-    .main{
-        .tab{
-            .tab-menu-link{
+    .main {
+        .tab {
+            .tab-menu-link {
                 width: 35% !important;
-                span{
+
+                span {
                     font-size: 14px;
-    color: #736c6c;
+                    color: #736c6c;
                 }
             }
         }
-       
+
     }
 
     //banner-response#
@@ -1298,23 +1426,55 @@ body {
         .new-laptops {
             width: 513px;
         }
-      .right2{
-        .tablet {
-            margin-top: 10px;
-            width: 513px;
+
+        .right2 {
+            .tablet {
+                margin-top: 10px;
+                width: 513px;
+            }
+
+            .cameras {
+                margin-top: 10px;
+                width: 513px;
+            }
+
+            .offer-cameras {
+                margin-top: 10px;
+                width: 513px;
+            }
         }
 
-        .cameras {
-            margin-top: 10px;
-            width: 513px;
-        }
+    }
 
-        .offer-cameras {
-            margin-top: 10px;
-            width: 513px;
+
+    #footer{
+        .contact-us{
+            .tel-box{
+                .text{
+                    margin-right: 240px;
+                }
+                .email{
+                    p{
+                        margin-right: 80px;
+
+                    }
+                }
+            }
+            .icons{
+                ul{
+                    justify-content: space-between;
+                    margin-right: 350px;
+                    margin-top: 20px;
+                    li{
+                        height: 35px;
+                        width: 35px;
+                        text-align: center;
+                        padding-top: 4px;
+                    }
+                }
+            }
         }
-      }
-       
+        
     }
 
 
@@ -1411,70 +1571,123 @@ body {
 
 
     //tab-menu
-    .main{
-        .tab{
-            .tab-menu-link{
+    .main {
+        .tab {
+            .tab-menu-link {
                 width: 27% !important;
-                span{
-                    font-size: 13px; 
+
+                span {
+                    font-size: 13px;
                     color: #736c6c;
                 }
             }
         }
     }
 
-      
-//baners-response
-#banners {
+
+    //baners-response
+    #banners {
+
+        .new-laptops {
+            width: 700px;
+        }
+
+        .right2 {
+            position: relative;
+            bottom: 336px;
+        }
+
+        .offer-cameras {
+
+            width: 331px;
+            top: 26px;
+            height: 332px;
+            background-size: cover;
+            background-position: 50%;
+
+            h2 {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            p {
+                top: 146px;
+            }
+
+            .btn-price {
+
+
+                bottom: 106px !important;
+                height: 47px;
+                width: 108px !important;
+            }
+        }
+
+        .tablet {
+
+            top: 350px;
+            width: 357px;
+            left: 342px;
+        }
+
+        .cameras {
+
+
+            left: 342px;
+
+            width: 357px;
+            top: 358px;
+
+        }
+    }
+
+
+    //featured
+    .cols{
+        position: relative;
+        bottom: 310px;
+    }
+
+
+    //footer
+    .col1 {
+        position: relative;
+        bottom: 80px;
+
+    }
+
+    #footer{
+        position: relative;
+        bottom: 290px;
+        .col2 {
+            position: relative;
+            bottom: 65px;
     
-    .new-laptops {
-        width: 700px;
-    }
-  .right2{
-    position: relative;
-bottom: 336px;
-  }
-    .offer-cameras {
-     
-        width: 331px;
-        top: 26px;
-        height: 332px;
-        background-size: cover;
-        background-position: 50%;
-
-        h2 {
-            font-size: 25px;
-            font-weight: 600;
-        }
-
-        p {
-            top: 146px;
-        }
-
-        .btn-price {
-          
-         
-            bottom: 106px !important;
-            height: 47px;
-            width: 108px !important;
+            .contact-us {
+               .tel-box{
+                .text{
+                    p{
+                        margin-right: 65px;
+                    }
+                }
+               }
+                .icons {
+                    position: relative;
+                    bottom: 17px;
+    
+                    ul {
+                        margin-right: 170px;
+    
+                        li {
+                            height: 35px;
+                            width: 35px;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
         }
     }
-    .tablet {
-        
-        top: 350px;
-        width: 357px;
-        left: 342px;
-    }
-
-    .cameras {
-       
-        
-        left: 342px;
    
-        width: 357px;
-    top: 358px;
-
-    }
-}
 
 }
