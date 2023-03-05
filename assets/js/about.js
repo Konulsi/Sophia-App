@@ -105,27 +105,32 @@ $(document).ready(function () {
 
 
 
-    //member-cards
 
     $(document).on("mouseover", ".single-team-member", function () {
 
-   
         $(".content").addClass("hide-social")
-
+        $(".text-box").addClass("background")
+        $(".img-box").css("opacity", "0.5")
     })
 
     $(document).on("mouseout", ".single-team-member", function () {
         $(".content").removeClass("hide-social")
-
-
+        $(".text-box").removeClass("background")
+        $(".img-box").css("opacity", "1")
     })
 
 
 
 
+// let items = document.querySelectorAll(".single-team-member");
+// let content = document.querySelector(".content");
+// let hideSocial = document.querySelector(".hide-social");
 
+// for (const item of items) {
+//     item.addEventListener("mouseover",function(){
 
-
+//     })
+// }
 
 
 

@@ -9,7 +9,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  z-index: 2;
+  z-index: 15;
 }
 
 p {
@@ -571,6 +571,10 @@ p {
 #our-experts .hide-social {
   transform: translate3d(0px, -70px, 0px);
 }
+#our-experts .background {
+  background-color: rgb(83, 83, 83) !important;
+  color: white;
+}
 #our-experts .item .single-team-member .img-box {
   position: relative;
 }
@@ -581,6 +585,9 @@ p {
 #our-experts .item .single-team-member .box {
   display: table;
   width: 100%;
+}
+#our-experts .item .single-team-member .box .content {
+  transition: all 0.5s;
 }
 #our-experts .item .single-team-member .box .content * {
   margin: 0;
