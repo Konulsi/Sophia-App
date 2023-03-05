@@ -65,7 +65,6 @@ $(document).ready(function () {
     //overlay
 
     $(document).on("click", "#overlay", function () {
-        console.log($(this));
         $(".sidebar").addClass("hide-sidebar");
         $("#overlay").css("display", "none")
     })

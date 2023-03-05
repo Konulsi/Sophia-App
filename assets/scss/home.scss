@@ -12,6 +12,13 @@
     z-index: 2;
 }
 
+// .container{
+//     max-width:0 !important;
+//     height: 0 !important;
+//     margin: 0;
+//     padding: 0;
+// }
+
 
 
 p {
@@ -469,13 +476,12 @@ p {
 
         a {
             text-decoration: none;
-            color: black;
+            color: #383838;
         }
 
         .item {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
-            font-family: Roboto, Helvetica Neue, sans-serif;
             width: 155px;
             height: 100%;
             display: flex;
@@ -497,7 +503,7 @@ p {
                 position: absolute;
                 bottom: 27px;
                 right: 40px;
-                color: #4b4848;
+                color: #383838;
             }
         }
 

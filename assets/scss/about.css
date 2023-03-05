@@ -461,112 +461,79 @@ p {
   color: black;
 }
 
-#intro .intro-content {
-  display: flex;
-  justify-content: space-between;
+#image-our {
+  margin-top: 60px;
 }
-#intro .intro-content .about-us {
-  padding: 0 0 0 146px;
+#image-our .text1 {
+  margin-left: 100px;
 }
-#intro .intro-content .about-us h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-  line-height: 1;
-  letter-spacing: 0.02em;
+#image-our .text1 h2 {
   font-weight: bold;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  margin-bottom: -5px;
 }
-#intro .intro-content .about-us p {
-  line-height: 26px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+#image-our .text2 p {
+  width: 650px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+#image-our .acccardions {
+  width: 650px;
+  margin-left: 100px;
+  margin-top: 25px;
+}
+#image-our .acccardions .accardion1 {
+  border-radius: 5px !important;
+}
+#image-our .acccardions .accardion1 .button1 {
+  font-weight: bold;
+  font-size: 17px;
+}
+#image-our .acccardions .accardion2 {
+  border: 1px solid rgb(236, 235, 235) !important;
+  margin-top: 10px;
+  border-radius: 5px !important;
+}
+#image-our .acccardions .accardion2 .button2 {
+  font-weight: bold;
+  font-size: 17px;
+}
+#image-our .acccardions .accardion3 {
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px !important;
+  border: 1px solid rgb(236, 235, 235) !important;
+}
+#image-our .acccardions .accardion3 .button3 {
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.center {
+#great-services {
+  background-color: #F7F7F7;
+}
+#great-services .great {
+  text-align: center;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid green;
+  flex-direction: column;
+  height: 170px;
 }
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.title {
-  text-align: center;
-  font-family: Arial;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.accordion__item {
+#great-services .great h2 {
+  font-size: 36px;
+  text-transform: capitalize;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #383838;
+  font-weight: 700;
   margin-bottom: 10px;
 }
-
-.accordion__item__header {
-  background-color: #CBEAFE;
-  padding: 15px;
-  cursor: pointer;
-  position: relative;
-  color: #000;
-  font-family: Arial;
-  font-weight: 400;
-  font-size: 20px;
+#great-services .great p {
+  color: #777;
 }
 
-.accordion__item__header::before {
-  height: 15px;
-  width: 15px;
-  content: "";
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  transition: 0.5s all;
-  transform: rotate(45deg);
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-}
-
-.accordion__item__header.active {
-  background-color: #33a0ff;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.accordion__item__header.active::before {
-  transform: rotate(-135deg);
-  top: 23px;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-}
-
-.accordion__item__content {
-  overflow-y: auto;
-  padding: 0;
-  display: none;
-}
-
-.testbtn {
-  border: 1px solid #99cc44 !important;
-  border-left: 5px solid #99cc44 !important;
-  border-right: 5px solid #99cc44 !important;
-  border-top: 5px solid #99cc44 !important;
-  border-bottom: 5px solid #99cc44 !important;
-  border-radius: 25px;
-  margin-right: 10px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .testbtn {
-    width: 100%;
-    height: auto;
-    padding: 0 !important;
-    margin: 1px !important;
-    font-size: 18px;
-  }
-}
 *,
 *::before,
 *::after {
