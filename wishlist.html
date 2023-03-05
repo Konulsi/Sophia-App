@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/scss/basket.css">
-    <title>Basket</title>
+    <link rel="stylesheet" href="./assets/scss/wishlist.css">
+    <title>Wishlist</title>
 </head>
-
 <body>
+    <div id="overlay">
+
+    </div>
     <header>
         <section id="nav-up">
             <div class="container">
@@ -118,7 +119,6 @@
                 </div>
             </div>
         </section>
-
         <section id="nav-area">
             <div class="container">
                 <div class="row">
@@ -178,10 +178,6 @@
             </div>
 
         </section>
-
-
-
-
 
         <section id="nav-down" class="d-lg-block d-none">
             <div class="container">
@@ -247,14 +243,14 @@
                     <div class="carts">
 
                         <div class="left">
-                            <h4>CART</h4>
+                            <h4>WISHLIST</h4>
                         </div>
 
                         <div class="right">
                             <ul>
                                 <li><a href="">HOME</a></li>
                                 <li><a href="">/</a></li>
-                                <li><a href="">CART</a></li>
+                                <li><a href="">WISHLIST</a></li>
 
                             </ul>
 
@@ -268,53 +264,38 @@
 
 
         </section>
-
         <section id="products">
 
             <div class="container">
-              
-                    <div class="basket-products">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="./assets/img/headphone1.png" alt=""></td>
-                                    <td><a href="">Salam</a></td>
-                                    <td>5555</td>
-                                    <td>
-                                        <button><i class="fa-solid fa-minus"></i></button>
-                                        <input type="text"disabled>
-                                        <button><i class="fa-solid fa-plus"></i></button>
-                                    </td>
-                                    <td class="price">266.00</td>
-                                    <td><i class="fa-solid fa-x"></i></td>
-                                </tr>
-                                <tr>
-                                    <td><button class="btn btn-primary shop"><a href="">Continue shopping</a></button></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><span>Grand total:</span></td>
-                                    <td><button class="btn btn-primary check">Proceed To Checkout</button></td>
-                                    
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-               
-               
+                <div class="basket-products">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col"><button class="btn btn-primary">Clear All</button></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/img/headphone1.png" alt=""></td>
+                                <td><a href="">Salam</a></td>
+                                <td class="price">266.00</td>
+                                <td><i class="fa-solid fa-x"></i></td>
+                            </tr>
+                            <tr class="d-none">
+                                <td><button class="btn btn-primary btn"><a href="">Continue shopping</a></button></td>
+                                <td></td>
+                                <td></td>                              
+                                <td><button class="btn btn-primary btn"> <a href="">Proceed To Checkout</a></button></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
-
     </main>
     <footer>
         <section id="footer">
@@ -323,7 +304,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-12 ">
                         <div class="sophia">
-                            <a href=""> <img src="./assets/img/sophia-logo-black.jpg" alt=""></a>
+                            <a href=""> <img src="./assets/img/blac-logo-sophia.jfif" alt=""></a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada fringilla
                                 sem, at
                                 dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam erat volutpat.
@@ -408,12 +389,10 @@
         </section>
     </footer>
 
-
     <script src="https://kit.fontawesome.com/db0b30a76d.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/basket.js"></script>
+    <script src="./assets/js/wishlist.js"></script>
 </body>
-
 </html>

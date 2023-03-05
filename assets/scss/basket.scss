@@ -478,10 +478,12 @@
             align-items: center;
             transition: all 0.4s;
             color: #383838;
+
             &:hover {
                 background-color: rgb(217 213 213 / 50%);
             }
         }
+
         .pages {
             position: relative;
 
@@ -709,8 +711,9 @@
             font-weight: 500;
             color: red
         }
-        .check{
-           
+
+        .check {
+
             position: relative;
             bottom: 14px;
             right: 15px;
@@ -720,7 +723,7 @@
             cursor: pointer;
             width: 181px;
             height: 49px;
-            
+
         }
 
 
@@ -842,10 +845,12 @@
     .contact-us {
         margin-top: 55px;
         line-height: 14px;
+
         .tel-box {
             display: flex;
             justify-content: flex-start;
-            .text{
+
+            .text {
                 margin-left: 10px;
             }
 
@@ -1017,28 +1022,32 @@
     }
 
 
-    #footer{
-        .contact-us{
+    #footer {
+        .contact-us {
             line-height: 14px;
-    font-size: 18px;
-    color: #000000e3;
-            .tel-box{
-                .text{
+            font-size: 18px;
+            color: #000000e3;
+
+            .tel-box {
+                .text {
                     margin-right: 240px;
                 }
-                .email{
-                    p{
+
+                .email {
+                    p {
                         margin-right: 80px;
 
                     }
                 }
             }
-            .icons{
-                ul{
+
+            .icons {
+                ul {
                     justify-content: space-between;
                     margin-right: 350px;
                     margin-top: 15px;
-                    li{
+
+                    li {
                         height: 40px;
                         width: 40px;
                         text-align: center;
@@ -1048,12 +1057,12 @@
             }
         }
 
-        .col1{
+        .col1 {
             position: relative;
             bottom: 45px;
         }
-        
-        .col2{
+
+        .col2 {
             position: relative;
             bottom: 60px;
         }
@@ -1225,56 +1234,81 @@
 
 
     //featured
-    .cols{
+    .cols {
         position: relative;
         bottom: 310px;
     }
 
 
-    //footer
-    .col1 {
-        position: relative;
-        bottom: 80px;
-
-    }
-
-    #footer{
-       .service-list{
-        ul{
-            line-height: 30px;
+    #products{
+        .basket-products {
+            overflow-x: scroll;
+    
+           
         }
-       }
+    
+       tbody td:nth-child(4) {
+            display: flex;
+            height: 118px;
+            margin-left: 30px;
+        }
+    
+    }
+  
+    //footer
+
+
+    #footer {
+        .service-list {
+            ul {
+                line-height: 30px;
+            }
+        }
+
+        .subscribe {
+            margin-top: 60px;
+        }
+
+        .col1 {
+            position: relative;
+            bottom: 80px;
+
+        }
+
         .col2 {
             position: relative;
             bottom: 65px;
-    
+
             .contact-us {
                 line-height: 15px;
-               .tel-box{
-                .text{
-                    p{
-                        margin-right: 65px;
-                        letter-spacing: -1px;
+
+                .tel-box {
+                    .text {
+                        p {
+                            margin-right: 65px;
+                            letter-spacing: -1px;
+                        }
                     }
                 }
-               }
+
                 .icons {
                     position: relative;
                     bottom: 34px;
-    
+
                     ul {
                         margin-right: 170px;
-    
+                        margin-top: 35px;
+
                         li {
                             height: 35px;
                             width: 35px;
-                            padding-top: 5px;
+                            padding-top: 8px;
                         }
                     }
                 }
             }
         }
     }
-   
+
 
 }

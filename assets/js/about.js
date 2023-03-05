@@ -65,7 +65,6 @@ $(document).ready(function () {
     //overlay
 
     $(document).on("click", "#overlay", function () {
-        console.log($(this));
         $(".sidebar").addClass("hide-sidebar");
         $("#overlay").css("display", "none")
     })
@@ -106,7 +105,20 @@ $(document).ready(function () {
 
 
 
-    //accordion
+    //member-cards
+
+    $(document).on("mouseover", ".single-team-member", function () {
+
+   
+        $(".content").addClass("hide-social")
+
+    })
+
+    $(document).on("mouseout", ".single-team-member", function () {
+        $(".content").removeClass("hide-social")
+
+
+    })
 
 
 

@@ -878,12 +878,23 @@
     position: relative;
     bottom: 310px;
   }
-  .col1 {
-    position: relative;
-    bottom: 80px;
+  #products .basket-products {
+    overflow-x: scroll;
+  }
+  #products tbody td:nth-child(4) {
+    display: flex;
+    height: 118px;
+    margin-left: 30px;
   }
   #footer .service-list ul {
     line-height: 30px;
+  }
+  #footer .subscribe {
+    margin-top: 60px;
+  }
+  #footer .col1 {
+    position: relative;
+    bottom: 80px;
   }
   #footer .col2 {
     position: relative;
@@ -902,10 +913,11 @@
   }
   #footer .col2 .contact-us .icons ul {
     margin-right: 170px;
+    margin-top: 35px;
   }
   #footer .col2 .contact-us .icons ul li {
     height: 35px;
     width: 35px;
-    padding-top: 5px;
+    padding-top: 8px;
   }
 }/*# sourceMappingURL=basket.css.map */
