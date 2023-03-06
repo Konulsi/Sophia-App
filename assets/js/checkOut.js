@@ -112,7 +112,13 @@ inputs.forEach(input => {
             this.nextElementSibling.nextElementSibling.style.color = "red";
             this.parentNode.lastElementChild.style.opacity = "1";
             this.nextElementSibling.style.setProperty("--beforeAndAfterBack", "red");
+            
         }
+    })
+
+
+    body.addEventListener("click", function(){
+        inputs.value = "";
     })
 
     input.addEventListener("keyup", function () {

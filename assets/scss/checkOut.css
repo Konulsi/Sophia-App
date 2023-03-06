@@ -469,6 +469,16 @@ p {
 .login {
   margin-right: 25px;
 }
+.login .input-section {
+  display: flex;
+  justify-content: space-between;
+}
+.login .input-section .input1 {
+  width: 54% !important;
+}
+.login .input-section .input2 {
+  width: 44% !important;
+}
 
 .register {
   margin-right: 15px;
@@ -479,34 +489,16 @@ p {
   font-size: 28px;
   text-align: left;
   color: #383838;
-  font-weight: 500;
+  font-weight: 600;
   font-family: Roboto, Helvetica Neue, sans-serif;
-}
-.inputs-area h3::before {
-  content: "";
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 0.0625rem;
-  bottom: -0.65625rem;
-  background-color: #e5e5e5;
-}
-.inputs-area h3::after {
-  content: "";
-  left: 0;
-  position: absolute;
-  width: 2.5rem;
-  height: 0.125rem;
-  background-color: #333;
-  bottom: -0.6875rem;
 }
 .inputs-area form p {
   position: relative;
-  top: 20px;
+  top: 5px;
   font-size: 15px;
   font-weight: 400;
-  line-height: 26px;
-  color: rgba(0, 0, 0, 0.87);
+  line-height: 0px;
+  color: rgba(0, 0, 0, 0.41);
   font-family: Roboto, Helvetica Neue, sans-serif;
 }
 .inputs-area form .group {
@@ -539,7 +531,7 @@ p {
 .inputs-area form .group textarea {
   height: 110px;
   padding: 10px 0 0 5px;
-  resize: none;
+  resize: vertical;
 }
 .inputs-area form .group label {
   color: #999;
@@ -582,8 +574,8 @@ p {
   opacity: 0;
 }
 .inputs-area form button {
-  width: 100px;
-  height: 45px;
+  width: 150px;
+  height: 50px;
   color: white;
   border-radius: 5px;
   border: none;
@@ -953,4 +945,4 @@ p {
     width: 35px;
     padding-top: 5px;
   }
-}/*# sourceMappingURL=account.css.map */
+}/*# sourceMappingURL=checkout.css.map */
