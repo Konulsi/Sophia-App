@@ -75,13 +75,13 @@ $(document).ready(function () {
 
 
 
-     //pages
+    //pages
 
-    $(document).on("click",".pages" , function(e){
+    $(document).on("click", ".pages", function (e) {
         e.preventDefault();
         $(".pages-list").removeClass("d-none");
     })
-   
+
 
 
 
@@ -194,6 +194,102 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
+
+
+
+
+
+    //basket
+
+
+
+    let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
+
+    let products = [];
+
+
+    if (localStorage.getItem("basket") != null)
+    {
+        products = JSON.parse(localStorage.getItem("basket"));
+        
+    }
+   
+
+    cardBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault()
+
+            let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
+
+            let productName = this.parentNode.parentNode.children[2].children[1].innerText;
+
+            let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
+
+
+            let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+
+            let existProduct = products.find(m => m.id == productId);
+
+
+            if (existProduct != undefined) {
+                existProduct.count += 1;
+                existProduct.price = productPrice * existProduct.count;
+            }
+            else {
+
+                products.push({
+                    id: productId,
+                    img: productImage,
+                    name: productName,
+                    price: productPrice,
+                    count: 1
+
+                })
+
+            }
+
+            localStorage.setItem("basket", JSON.stringify(products));
+
+
+            getBasketCount(products);
+
+
+        })
+
+
+
+      
+
+
+
+    });
+
+
+
+
+
+    function getBasketCount(arr) {
+        let sum = 0;
+
+        for (const item of arr) {
+
+            sum += item.count;
+        }
+
+        document.querySelector(".count").innerText = sum;
+     
+    }
+
+    getBasketCount(products);
+
+
+
+
+
+
+
+
 
 
 

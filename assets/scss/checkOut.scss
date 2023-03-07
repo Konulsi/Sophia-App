@@ -396,16 +396,14 @@ p {
 
             .count {
                 position: absolute;
-
                 bottom: 17px;
                 right: 29px;
-                letter-spacing: 12px;
                 background-color: black;
                 border-radius: 50%;
-                width: 17px;
+                width: 20px;
                 font-size: 12px;
-                height: 19px;
-                padding-left: 5px;
+                height: 20px;
+                padding-left: 4px;
 
             }
         }
@@ -593,22 +591,20 @@ p {
 
 .input-box {
     padding: 20px;
-    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, .12) !important;
 }
 
 .login {
-    margin-right: 25px;
 
     .input-section {
         display: flex;
         justify-content: space-between;
 
         .input1 {
-            width: 54% !important;
+            width: 49% !important;
         }
 
         .input2 {
-            width: 44% !important;
+            width: 49% !important;
         }
     }
 }
@@ -756,6 +752,147 @@ p {
     }
 
 
+}
+
+
+.order {
+    width: 100%;
+    border: 1px solid rgb(223, 222, 222);
+    padding: 30px;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+
+
+    .texts {
+
+        span {
+            font-size: 20px;
+            font-weight: 500;
+
+            &:nth-child(2) {
+                float: right;
+                width: 35%;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .border {
+        margin-top: 20px;
+
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    .text {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .text1 {
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        .text2 {
+            float: right;
+            width: 35%;
+            font-weight: 500;
+
+            span {
+                color: red;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .borders1 {
+        margin-top: 35px;
+
+    }
+
+
+    .text11 {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .text1 {
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        .text2 {
+            float: right;
+            width: 35%;
+            font-weight: 500;
+
+            span {
+                color: red;
+                font-size: 20px;
+            }
+        }
+    }
+
+
+
+    
+
+
+
+    button {
+        background-color: #EF6C00;
+        border: none;
+        width: 155px;
+        height: 45px;
+        border-radius: 3px;
+        margin-top: 35px;
+        display: block;
+
+        span {
+            color: white;
+            font-weight: 500;
+        }
+    }
+
+    .payment {
+        gap: 5px;
+        display: inline-grid;
+        margin-top: 35px;
+
+
+        .bank {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-weight: 400;
+                font-size: 14px;
+                color: gray;
+                font-family: revert;
+            }
+
+        }
+
+        input {
+            transition: accent-color ease 280ms;
+            accent-color: #F3392C;
+            cursor: pointer;
+
+            height: 30px;
+            width: 20px;
+        }
+
+
+
+    }
 }
 
 

@@ -319,13 +319,12 @@ p {
   position: absolute;
   bottom: 17px;
   right: 29px;
-  letter-spacing: 12px;
   background-color: black;
   border-radius: 50%;
-  width: 17px;
+  width: 20px;
   font-size: 12px;
-  height: 19px;
-  padding-left: 5px;
+  height: 20px;
+  padding-left: 4px;
 }
 #nav-area .spCard-dropdown {
   position: absolute;
@@ -463,21 +462,17 @@ p {
 
 .input-box {
   padding: 20px;
-  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
 }
 
-.login {
-  margin-right: 25px;
-}
 .login .input-section {
   display: flex;
   justify-content: space-between;
 }
 .login .input-section .input1 {
-  width: 54% !important;
+  width: 49% !important;
 }
 .login .input-section .input2 {
-  width: 44% !important;
+  width: 49% !important;
 }
 
 .register {
@@ -596,6 +591,102 @@ p {
   margin-bottom: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.order {
+  width: 100%;
+  border: 1px solid rgb(223, 222, 222);
+  padding: 30px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.order .texts span {
+  font-size: 20px;
+  font-weight: 500;
+}
+.order .texts span:nth-child(2) {
+  float: right;
+  width: 35%;
+  font-weight: 500;
+  font-size: 16px;
+}
+.order .border {
+  margin-top: 20px;
+}
+.order p {
+  margin-top: 20px;
+}
+.order .text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.order .text .text1 span {
+  font-weight: 500;
+}
+.order .text .text2 {
+  float: right;
+  width: 35%;
+  font-weight: 500;
+}
+.order .text .text2 span {
+  color: red;
+  font-size: 20px;
+}
+.order .borders1 {
+  margin-top: 35px;
+}
+.order .text11 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.order .text11 .text1 span {
+  font-weight: 500;
+}
+.order .text11 .text2 {
+  float: right;
+  width: 35%;
+  font-weight: 500;
+}
+.order .text11 .text2 span {
+  color: red;
+  font-size: 20px;
+}
+.order button {
+  background-color: #EF6C00;
+  border: none;
+  width: 155px;
+  height: 45px;
+  border-radius: 3px;
+  margin-top: 35px;
+  display: block;
+}
+.order button span {
+  color: white;
+  font-weight: 500;
+}
+.order .payment {
+  gap: 5px;
+  display: inline-grid;
+  margin-top: 35px;
+}
+.order .payment .bank {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.order .payment .bank span {
+  font-weight: 400;
+  font-size: 14px;
+  color: gray;
+  font-family: revert;
+}
+.order .payment input {
+  transition: accent-color ease 280ms;
+  accent-color: #F3392C;
+  cursor: pointer;
+  height: 30px;
+  width: 20px;
 }
 
 *,
@@ -945,4 +1036,4 @@ p {
     width: 35px;
     padding-top: 5px;
   }
-}/*# sourceMappingURL=checkout.css.map */
+}/*# sourceMappingURL=checkOut.css.map */
