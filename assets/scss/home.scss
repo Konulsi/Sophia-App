@@ -378,9 +378,11 @@ p {
             right: 22px;
             top: 34px;
             transition: all 0.4s;
-            &:hover{
+
+            &:hover {
                 background-color: #d2700f;
             }
+
             i {
                 color: white;
                 font-size: 19px;
@@ -423,10 +425,10 @@ p {
         font-family: Roboto, Arial, Helvetica, sans-serif;
         box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
         z-index: 5;
-    
+
         a {
             text-decoration: none;
-    
+
             p {
                 top: 5px;
                 position: relative;
@@ -435,24 +437,95 @@ p {
                 font-weight: 500;
             }
         }
-    
-        .count {
-    
-            bottom: 73px;
-            left: 180px;
-            position: absolute;
-            color: #444;
-            font-size: 14px;
-            font-weight: 500;
+
+
+        .check-card{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-    
+
+        .product-detail{
+            display: flex;
+            justify-content: space-between;
+            padding: 7px;
+
+            .text{
+                p{
+                    font-weight: 500;
+                    font-size: 20px;
+                    font-family: Roboto,Arial,Helvetica,sans-serif;
+                }
+                span{
+                    color: #777;
+                    font-size: 15px;
+                    margin-top: 5px;
+                    display: block;
+                }
+            }
+            .icon{
+                i{
+                    color: #c3c3c3;
+                    font-size: 17px;
+                    margin-top: 8px;
+                }
+               
+            }
+        }
+
+        .subtotal{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+
+        // .count {
+
+        //     top: 16px;
+        //     left: 180px;
+        //     position: absolute;
+        //     color: #444;
+        //     font-size: 14px;
+        //     font-weight: 500;
+        // }
+
         .alert {
             height: 1px;
             position: relative;
             left: 26px;
             bottom: 12px;
         }
+
+
+        // .table {
+            
+        //     tbody {
+        //         tr {
     
+        //             td {
+        //                 border: none;
+
+        //                 display: flex;
+        //                 justify-content: space-between;
+        //                 i{
+        //                     color: #c3c3c3;
+        //                     font-size: 20px;
+        //                 }
+
+        //             }
+        //         }
+        //     }
+
+        // }
+
+
+
     }
 }
 
@@ -829,7 +902,7 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: relative;
     border-radius: 5px;
-  
+
 
     .img-area {
 
@@ -1497,25 +1570,28 @@ body {
     }
 
 
-    #footer{
-        .contact-us{
-            .tel-box{
-                .text{
+    #footer {
+        .contact-us {
+            .tel-box {
+                .text {
                     margin-right: 240px;
                 }
-                .email{
-                    p{
+
+                .email {
+                    p {
                         margin-right: 80px;
 
                     }
                 }
             }
-            .icons{
-                ul{
+
+            .icons {
+                ul {
                     justify-content: space-between;
                     margin-right: 350px;
                     margin-top: 20px;
-                    li{
+
+                    li {
                         height: 35px;
                         width: 35px;
                         text-align: center;
@@ -1524,7 +1600,7 @@ body {
                 }
             }
         }
-        
+
     }
 
 
@@ -1693,7 +1769,7 @@ body {
 
 
     //featured
-    .cols{
+    .cols {
         position: relative;
         bottom: 310px;
     }
@@ -1706,28 +1782,30 @@ body {
 
     }
 
-    #footer{
+    #footer {
         position: relative;
         bottom: 290px;
+
         .col2 {
             position: relative;
             bottom: 65px;
-    
+
             .contact-us {
-               .tel-box{
-                .text{
-                    p{
-                        margin-right: 65px;
+                .tel-box {
+                    .text {
+                        p {
+                            margin-right: 65px;
+                        }
                     }
                 }
-               }
+
                 .icons {
                     position: relative;
                     bottom: 17px;
-    
+
                     ul {
                         margin-right: 170px;
-    
+
                         li {
                             height: 35px;
                             width: 35px;
@@ -1738,6 +1816,7 @@ body {
             }
         }
     }
-   
+
 
 }
+

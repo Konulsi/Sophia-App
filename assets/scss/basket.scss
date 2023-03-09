@@ -426,7 +426,7 @@
 
         .count {
 
-            bottom: 65px;
+            top: 25px;
             left: 180px;
             position: absolute;
             color: #444;
@@ -441,11 +441,27 @@
             bottom: 12px;
         }
 
+        .table {
+            tbody {
+                tr {
+                    td {
+
+                        display: flex;
+                        justify-content: space-between;
+                        i{
+                            color: #c3c3c3;
+                            font-size: 20px;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
     }
 
 }
-
-
 
 
 //navDown
@@ -594,6 +610,8 @@
                 border-bottom-width: 1px;
                 border-bottom-style: solid;
                 border-color: black;
+
+
             }
         }
 
@@ -643,14 +661,15 @@
 
                     i {
                         color: rgba(0, 0, 0, .54);
-                       
+
                     }
                 }
             }
 
             &:nth-child(6) {
                 padding-top: 38px;
-                i{
+
+                i {
                     cursor: pointer;
                 }
             }
@@ -658,7 +677,7 @@
             &:nth-child(5) {
 
                 padding-top: 38px;
-                
+
             }
 
             a {

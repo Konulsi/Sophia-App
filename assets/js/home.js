@@ -284,12 +284,14 @@ $(document).ready(function () {
 
 
 
+
+//Check-card
+
+let chekCard = document.querySelector("#nav-area .spCard-dropdown .check-card")
+
+for (const product of products) {
     
-
-    array.forEach(element => {
-
-    });
-
+}
 
 
 

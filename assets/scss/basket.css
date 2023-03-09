@@ -330,7 +330,7 @@
   font-weight: 500;
 }
 #nav-area .spCard-dropdown .count {
-  bottom: 65px;
+  top: 25px;
   left: 180px;
   position: absolute;
   color: #444;
@@ -342,6 +342,14 @@
   position: relative;
   left: 26px;
   bottom: 12px;
+}
+#nav-area .spCard-dropdown .table tbody tr td {
+  display: flex;
+  justify-content: space-between;
+}
+#nav-area .spCard-dropdown .table tbody tr td i {
+  color: #c3c3c3;
+  font-size: 20px;
 }
 
 #nav-down {
