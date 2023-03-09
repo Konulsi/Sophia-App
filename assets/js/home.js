@@ -250,7 +250,8 @@ $(document).ready(function () {
 
 
             getBasketCount(products);
-
+            chekCard()
+            subTotal();
 
         })
 
@@ -287,11 +288,47 @@ $(document).ready(function () {
 
 //Check-card
 
-let chekCard = document.querySelector("#nav-area .spCard-dropdown .check-card")
+function chekCard(){
+    let chekCard = document.querySelector("#nav-area .spCard-dropdown")
 
-for (const product of products) {
+    chekCard.innerHTML ="";
+    for (const product of products) {
     
+
+        chekCard.innerHTML+= `
+        <div class="chek-card-item" data-id = ${product.id}>
+    <div class="border"></div>
+    <div class="product-detail">
+    <div class="text">
+        <p>${product.name}</p>
+        <span>${product.count} x ${product.price}</span>
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-trash-can"></i>
+    </div>
+    
+    </div>
+    <div class="border"></div>
+    </div>
+    `
+    }
 }
+
+
+chekCard()
+
+function subTotal(){
+    let sum = 0;
+ for (const product of products) {
+   
+    product.price= product.price * product.count;
+    sum+=product.price;
+ }
+ document.querySelector(".subtotal span").innerText = `$ ${sum}`;
+
+}
+
+subTotal();
 
 
 
