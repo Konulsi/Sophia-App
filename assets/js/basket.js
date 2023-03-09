@@ -106,38 +106,51 @@ $(document).ready(function () {
 
     let products = JSON.parse(localStorage.getItem("basket"));
 
+    function getBasketDatas(){
+        if (products != null) {
 
-    if (products != null) {
-
-        for (const product of products) {
-            tableBody.innerHTML += `
-                <tr data-id="${product.id}">
-                <td>
-                <img src="${product.img}" alt="">
-                </td>
-                <td>${product.name}</td>
-                <td>$ ${product.price}</td>
-                <td>
-                    <button class = "minus"><i class="fa-solid fa-minus"></i></button>
-                    <input value = "${product.count}" type="text"disabled>
-                    <button class = "plus"><i class="fa-solid fa-plus "></i></button>
-                </td>
-                <td class="price"> ${product.price * product.count}</td>
-                <td><i class="fa-solid fa-x delete-icon"></i></td>
-            </tr>`
+            for (const product of products) {
+                tableBody.innerHTML += `
+                    <tr data-id="${product.id}">
+                    <td>
+                    <img src="${product.img}" alt="">
+                    </td>
+                    <td>${product.name}</td>
+                    <td>$ ${product.price}</td>
+                    <td>
+                        <button class = "minus"><i class="fa-solid fa-minus"></i></button>
+                        <input value = "${product.count}" type="text"disabled>
+                        <button class = "plus"><i class="fa-solid fa-plus "></i></button>
+                    </td>
+                    <td class="price"> $ ${product.price * product.count}</td>
+                    <td><i class="fa-solid fa-x delete-icon"></i></td>
+                </tr>`
+            }
+    
+            getBasketCount(products);
+    
+        } else {
+    
+            showAlert()
         }
+    
+    
+    }
 
-        getBasketCount(products);
+    getBasketDatas();
 
-    } else {
 
+    //alert
+    function showAlert() {
+        
+        document.querySelector(".basket-products .table").classList.add("d-none");
+        document.querySelector("#products .show-alert").classList.remove("d-none")
 
     }
 
 
 
-
-
+// basket count
     function getBasketCount(arr) {
         let sum = 0;
 
@@ -152,7 +165,11 @@ $(document).ready(function () {
 
 
 
-    function deleteIdProduct(id) {
+
+    //basket delete
+
+
+    function deleteIdProductFromBasket(id) {
         products = products.filter(m => m.id != id)
 
         localStorage.setItem("basket", JSON.stringify(products));
@@ -161,25 +178,28 @@ $(document).ready(function () {
     }
 
 
+    function deleteIcons(){
+        let deletIcons = document.querySelectorAll("#products .basket-products .table .delete-icon");
 
-    //basket delete
-
-    let deletIcons = document.querySelectorAll("#products .basket-products .table .delete-icon");
-
-
-    deletIcons.forEach(deletIcon => {
-
-        deletIcon.addEventListener("click", function () {
-            let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"))
-
-            deleteIdProduct(id);
-
-            this.parentNode.parentNode.remove();
-
-            getBasketCount(products);
-        })
-    });
-
+        deletIcons.forEach(deletIcon => {
+    
+            deletIcon.addEventListener("click", function () {
+                let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"))
+    
+                deleteIdProductFromBasket(id);
+    
+                this.parentNode.parentNode.remove();
+    
+                if(products.length == 0){
+                    localStorage.removeItem("basket")
+                    showAlert();
+                }
+                getBasketCount(products);
+            })
+        });
+    }
+   
+    deleteIcons();
 
 
 
@@ -187,87 +207,82 @@ $(document).ready(function () {
 
     function showTotalPrice() {
         let total = document.querySelector("#products .table tr td:nth-child(5) span");
-
         let sum = 0;
 
         for (const product of products) {
             sum += parseInt(product.price * product.count)
-
         }
-
         total.innerHTML = "Grand total: $" + sum;
     }
 
-    showTotalPrice();
 
+    function decreaseProduct(){
 
+        let minusIcons = document.querySelectorAll("tbody tr td  .minus");
 
-
-    //minus icon 
-
-    let minusIcons = document.querySelectorAll("tbody tr td  .minus");
-
-
-    for (const minusIcon of minusIcons) {
-
-        minusIcon.addEventListener("click", function () {
-
-            for (const product of products) {
-                if (product.id == minusIcon.parentNode.parentNode.getAttribute("data-id")) {
-                    if (minusIcon.nextElementSibling.value == 1) {
-                        return;
+        for (const minusIcon of minusIcons) {
+    
+            minusIcon.addEventListener("click", function () {
+    
+                for (const product of products) {
+                    if (product.id == minusIcon.parentNode.parentNode.getAttribute("data-id")) {
+                        if (minusIcon.nextElementSibling.value == 1) {
+                            return;
+                        }
+                        else {
+                            minusIcon.nextElementSibling.value--;
+    
+                            product.count--;
+    
+                            minusIcon.parentNode.nextElementSibling.innerText = "$ " + product.price * product.count;
+                        }
+    
                     }
-                    else {
-                        minusIcon.nextElementSibling.value--;
+                }
+    
+                localStorage.setItem("basket", JSON.stringify(products))
+                showTotalPrice();
+                getBasketCount(products);
+            })
+    
+        }
+    }
+    decreaseProduct();
 
-                        product.count--;
 
-                        minusIcon.parentNode.nextElementSibling.innerText = product.price * product.count + "$";
+    function increaseProduct(){
+        let plusIcons = document.querySelectorAll("tbody tr td  .plus");
+
+        for (const plusIcon of plusIcons) {
+            plusIcon.addEventListener("click", function () {
+    
+                for (const product of products) {
+                    if (product.id == plusIcon.parentNode.parentNode.getAttribute("data-id")) {
+    
+                        plusIcon.previousElementSibling.value++;
+    
+                        product.count++;
+    
+                        plusIcon.parentNode.nextElementSibling.innerText = "$ " + product.price * product.count;
+    
+    
                     }
-
                 }
-            }
-
-            localStorage.setItem("basket", JSON.stringify(products))
-            showTotalPrice();
-        })
-
+    
+                localStorage.setItem("basket", JSON.stringify(products))
+                showTotalPrice();
+                getBasketCount(products);
+    
+            })
+    
+        }
     }
+    increaseProduct();
 
 
 
+    
 
-    //plus icon
-
-
-    let plusIcons = document.querySelectorAll("tbody tr td  .plus");
-
-
-    for (const plusIcon of plusIcons) {
-
-        plusIcons.addEventListener("click", function () {
-
-            for (const product of products) {
-                if (product.id == plusIcon.parentNode.parentNode.getAttribute("data-id")) {
-
-                    plusIcon.parentNode.previousElementSibling.value++;
-
-                    product.count++;
-
-                    plusIcon.parentNode.previousElementSibling.innerText = product.price * product.count + "$";
-
-
-                }
-            }
-
-            localStorage.setItem("basket", JSON.stringify(products))
-            showTotalPrice();
-        })
-
-    }
-
-
-    showTotalPrice();
 
 
 

@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 
 
-
+   
 
 
     //slider
@@ -123,6 +123,7 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });
+
 
 
 
@@ -199,35 +200,32 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
     //basket
-
-
 
     let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
 
     let products = [];
 
 
-    if (localStorage.getItem("basket") != null)
-    {
+    if (localStorage.getItem("basket") != null) {
         products = JSON.parse(localStorage.getItem("basket"));
-        
+
     }
-   
+
 
     cardBtns.forEach(btn => {
         btn.addEventListener("click", function (e) {
             e.preventDefault()
 
             let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
-
             let productName = this.parentNode.parentNode.children[2].children[1].innerText;
-
             let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
-
-
             let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
-
 
             let existProduct = products.find(m => m.id == productId);
 
@@ -258,11 +256,13 @@ $(document).ready(function () {
 
 
 
-      
+
 
 
 
     });
+
+
 
 
 
@@ -277,13 +277,18 @@ $(document).ready(function () {
         }
 
         document.querySelector(".count").innerText = sum;
-     
+
     }
 
     getBasketCount(products);
 
 
 
+    
+
+    array.forEach(element => {
+
+    });
 
 
 
