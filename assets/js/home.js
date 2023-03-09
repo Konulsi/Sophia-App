@@ -234,7 +234,6 @@ $(document).ready(function () {
 
             if (existProduct != undefined) {
                 existProduct.count += 1;
-                existProduct.price = productPrice * existProduct.count;
             }
             else {
 

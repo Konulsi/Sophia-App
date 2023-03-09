@@ -107,7 +107,7 @@ $(document).ready(function () {
     let products = JSON.parse(localStorage.getItem("basket"));
 
 
-    if(products != null){
+    if (products != null) {
 
         for (const product of products) {
             tableBody.innerHTML += `
@@ -118,18 +118,18 @@ $(document).ready(function () {
                 <td>${product.name}</td>
                 <td>$ ${product.price}</td>
                 <td>
-                    <button><i class="fa-solid fa-minus"></i></button>
-                    <input type="text"disabled placeholder = "${product.count}">
-                    <button><i class="fa-solid fa-plus "></i></button>
+                    <button class = "minus"><i class="fa-solid fa-minus"></i></button>
+                    <input value = "${product.count}" type="text"disabled>
+                    <button class = "plus"><i class="fa-solid fa-plus "></i></button>
                 </td>
-                <td class="price">266.00</td>
+                <td class="price"> ${product.price * product.count}</td>
                 <td><i class="fa-solid fa-x delete-icon"></i></td>
             </tr>`
         }
 
         getBasketCount(products);
 
-    }else{
+    } else {
 
 
     }
@@ -147,27 +147,31 @@ $(document).ready(function () {
         }
 
         document.querySelector(".count").innerText = sum;
-     
+
+    }
+
+
+
+    function deleteIdProduct(id) {
+        products = products.filter(m => m.id != id)
+
+        localStorage.setItem("basket", JSON.stringify(products));
+        showTotalPrice();
+
     }
 
 
 
-    function deleteIdProduct(id){
-        products = products.filter(m => m.id != id )
-
-        localStorage.setItem("basket" , JSON.stringify(products));
-
-    }
-
+    //basket delete
 
     let deletIcons = document.querySelectorAll("#products .basket-products .table .delete-icon");
 
 
     deletIcons.forEach(deletIcon => {
-        
-        deletIcon.addEventListener("click",function(){
+
+        deletIcon.addEventListener("click", function () {
             let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"))
-            console.log(id);
+
             deleteIdProduct(id);
 
             this.parentNode.parentNode.remove();
@@ -179,10 +183,91 @@ $(document).ready(function () {
 
 
 
+    //basket total
+
+    function showTotalPrice() {
+        let total = document.querySelector("#products .table tr td:nth-child(5) span");
+
+        let sum = 0;
+
+        for (const product of products) {
+            sum += parseInt(product.price * product.count)
+
+        }
+
+        total.innerHTML = "Grand total: $" + sum;
+    }
+
+    showTotalPrice();
 
 
 
 
+    //minus icon 
+
+    let minusIcons = document.querySelectorAll("tbody tr td  .minus");
+
+
+    for (const minusIcon of minusIcons) {
+
+        minusIcon.addEventListener("click", function () {
+
+            for (const product of products) {
+                if (product.id == minusIcon.parentNode.parentNode.getAttribute("data-id")) {
+                    if (minusIcon.nextElementSibling.value == 1) {
+                        return;
+                    }
+                    else {
+                        minusIcon.nextElementSibling.value--;
+
+                        product.count--;
+
+                        minusIcon.parentNode.nextElementSibling.innerText = product.price * product.count + "$";
+                    }
+
+                }
+            }
+
+            localStorage.setItem("basket", JSON.stringify(products))
+            showTotalPrice();
+        })
+
+    }
+
+
+
+
+    //plus icon
+
+
+    let plusIcons = document.querySelectorAll("tbody tr td  .plus");
+
+
+    for (const plusIcon of plusIcons) {
+
+        plusIcons.addEventListener("click", function () {
+
+            for (const product of products) {
+                if (product.id == plusIcon.parentNode.parentNode.getAttribute("data-id")) {
+
+                    plusIcon.parentNode.previousElementSibling.value++;
+
+                    product.count++;
+
+                    plusIcon.parentNode.previousElementSibling.innerText = product.price * product.count + "$";
+
+
+                }
+            }
+
+            localStorage.setItem("basket", JSON.stringify(products))
+            showTotalPrice();
+        })
+
+    }
+
+
+    showTotalPrice();
 
 
 
