@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./assets/scss/productDetails.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="overlay">
+
+    </div>
+    <header>
+        <section id="nav-up">
+            <div class="container">
+                <div class="up">
+
+                    <i class="fa-solid fa-bars hamburger-menu d-lg-none"></i>
+                    <div class="sidebar d-lg-none hide-sidebar ">
+                        <i class="fa-solid fa-xmark x-icon"></i>
+                        <hr>
+                        <div class="sidebar-list ">
+                            <a href="">
+                                <p>Home</p>
+                            </a>
+                            <a href="">
+                                <p>Contact</p>
+                            </a>
+                            <a href="">
+                                <p>About</p>
+                            </a>
+                            <a href="">
+                                <p>Blog</p>
+                            </a>
+
+                            <div class="sidebar-pages">
+                                <a href="">Pages</a>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="sidebar-pages-list d-none">
+                                <a href="">
+                                    <p>Home</p>
+                                </a>
+                                <a href="">
+                                    <p>Contact</p>
+                                </a>
+                                <a href="">
+                                    <p>About</p>
+                                </a>
+                                <a href="">
+                                    <p>Blog</p>
+                                </a>
+                                <a href="">
+                                    <p>Basket</p>
+                                </a>
+                                <a href="">
+                                    <p>Wishlist</p>
+                                </a>
+                                <a href="">
+                                    <p>Cart</p>
+                                </a>
+                                <a href="">
+                                    <p>PoductDetail</p>
+                                </a>
+                                <a href="">
+                                    <p>Checkout</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="left">
+                        <div class="currency">
+                            <span>USD</span>
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="valyuta d-none">
+                            <button class="usd-btn">
+                                <p>USD</p>
+                            </button>
+                            <button class="eur-btn">
+                                <p>EUR</p>
+                            </button>
+                        </div>
+                        <div class="language">
+                            <a href=""><img src="./assets/img/gb.svg" alt=""><span>English</span><i
+                                    class="fa-solid fa-sort-down"></i></a>
+
+                        </div>
+                        <div class="language-area d-none">
+                            <button><img class="englis-flag" src="./assets/img/gb.svg"
+                                    alt=""><span>English</span></button>
+                            <button><img src="./assets/img/germany.svg" alt=""><span>German</span></button>
+                            <button><img src="./assets/img/french.svg" alt=""><span>French</span></button>
+                            <button><img src="./assets/img/russian.svg" alt=""><span>Russian</span></button>
+                            <button><img src="./assets/img/turkis.svg" alt=""><span>Turkish</span></button>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="wishlist">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href="">WISHLIST</a>
+                        </div>
+
+                        <div class="compare">
+                            <a href=""><i class="fa-solid fa-code-compare"></i></a>
+                            <a href="">COMPARE</a>
+                        </div>
+
+                        <div class="my-account">
+                            <a href=""><i class="fa-solid fa-user"></i></a>
+                            <a href="">My Account</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="nav-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12 col-sm-12 logo ">
+                        <div class="img-log">
+                            <img src="./assets/img/logo-white.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="input-area">
+                            <input type="text" placeholder="Type to search..">
+                            <button class="btn-search">SEARCH</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="cal-bucket">
+
+                            <div class="div-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="div-phone">
+                                <p>Helpline:</p>
+                                <span>02(981)336 111</span>
+                            </div>
+                            <div class="cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="count">0</span>
+                                <span class="basket-subtotal">$0.00</span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="chek-card-box d-none">
+                        <div class="check-card">
+                            <a href="basket.html">
+                                <p>CHECK CARD</p>
+                            </a>
+    
+                            <p class="count">0 ITEM</p>
+                        </div>
+                        <div class="border"></div>
+
+                        <div class="chek-card-item d-none">
+    
+                            
+                        </div>
+    
+                        <div class="subtotal d-none ">
+                            <p>Subtotal:</p>
+                            <span></span>
+                        </div>
+                        <p class="alert">Please add product</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section id="nav-down" class="d-lg-block d-none">
+            <div class="container">
+                <div class="down">
+                    <div class="home item">
+                        <a href="">HOME</a>
+                    </div>
+                    <div class="contact item">
+                        <a href="">CONTACT</a>
+                    </div>
+                    <div class="about item">
+                        <a href="">ABOUT</a>
+                    </div>
+                    <div class="pages item">
+                        <a href="">PAGES</a>
+                        <i class="fa-solid fa-sort-down"></i>
+                    </div>
+                    <div class="pages-list d-none">
+                        <a href="">
+                            <p>Home</p>
+                        </a>
+                        <a href="">
+                            <p>Contact</p>
+                        </a>
+                        <a href="">
+                            <p>About</p>
+                        </a>
+                        <a href="">
+                            <p>Blog</p>
+                        </a>
+                        <a href="">
+                            <p>Basket</p>
+                        </a>
+                        <a href="">
+                            <p>Wishlist</p>
+                        </a>
+                        <a href="">
+                            <p>Cart</p>
+                        </a>
+                        <a href="">
+                            <p>PoductDetail</p>
+                        </a>
+                        <a href="">
+                            <p>Checkout</p>
+                        </a>
+                    </div>
+                    <div class="blog item">
+                        <a href="">BLOG</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </header>
+    <main>
+
+        <section id="breadcrumb-section">
+            <div class="container">
+                <div class="row ">
+                    <div class="carts">
+
+                        <div class="left">
+                            <h4>ONTEC E Headset</h4>
+                        </div>
+
+                        <div class="right">
+                            <ul>
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">/</a></li>
+                                <li><a href="">PRODUCT</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+        <section id="product-details">
+
+            <div class="container">
+                <div class="row">
+                    <div class="modls">
+                       
+                        <button type="button" class="btn btn-primary open d-none" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">                                      
+                                        <img src="" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="photo-product">
+                          <img src="./assets/img/headphone3.png" alt="">
+                            <i class="fa-solid fa-magnifying-glass-plus icon"></i>
+                        </div>
+                        <div class="swiper-wrapper">
+
+                            <div class="col-3">
+                                <div class="mat-card">
+                                    <img src="./assets/img/headphone2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mat-card">
+                                    <img src="./assets/img/headphone5.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="mat-card">
+                                    <img src="./assets/img/headphone4.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="mat-card">
+                                    <img src="./assets/img/headphone1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="mat-card">
+                                    <img src="./assets/img/headphone3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-5">
+                        <div class="product-area">
+                            <div class="product-info">
+                                <h2>ONTEC E Headset</h2>
+                                <del>$160.00</del>
+                                <span>50% Off</span>
+                                <h3>$175.00</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industrys standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen
+                                    book.
+                                </p>
+                            </div>
+                            <p><span>Avalibility: </span><span>In Stock</span></p>
+
+                            <div class="quantity">
+                                <span>Quantity</span>
+                            </div>
+                            <div class="product-count">
+
+                                <button><i class="fa-solid fa-minus"></i></button>
+                                <input type="text">
+                                <button><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn btn-primary"><span>ADD TO CARD</span></button>
+                                <button class="btn btn-primary"><span>BUY NOW</span></button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="info-bar">
+                            <div class="mat-card cardss">
+                                <i class="fa-solid fa-gift"></i>
+                                <div class="text-mutled">
+                                    <p>BONUS PLUS</p>
+                                    <span>Get a bonus plus for buying more that three products</span>
+                                </div>
+
+                            </div>
+                            <div class="mat-card-indicator cardss">
+                                <i class="fa-solid fa-truck"></i>
+                                <div class="text-mutled">
+                                    <p>FREE SHIPPING</p>
+                                    <span>Free shipping on all orders over $99</span>
+                                </div>
+
+                            </div>
+                            <div class="mat-card-dollar cardss">
+                                <i class="fa-solid fa-dollar-sign icon-card"></i>
+                                <div class="text-mutled">
+                                    <p>MONEY BACK GUARANTEE</p>
+                                    <span class="span-card">100% money back guarantee</span>
+                                </div>
+
+                            </div>
+                            <div class="mat-card-time cardss time ">
+                                <i class="fa-solid fa-clock-rotate-left icon-card"></i>
+                                <div class="text-mutled">
+                                    <p>ONLINE SUPPORT 24/7</p>
+                                    <span>Call us: 02 3555 65454 55</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="sale-widget">
+                            <div class="sale-widget1"><span>BIG SALLE</span></div>
+                            <div class="sale-widget2"><span>DO NOT MISS IT!</span></div>
+                            <div class="discount"> <span>60</span></div>
+                            <div class="div-procent">
+                                <span>%</span><br>
+                                <span>off</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nects.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="tab-menu">
+            <main class="main">
+                <div class="container">
+                    <div class="col-10">
+                        <div class="tab">
+                            <div class="tab-menu">
+                                <button class="tab-menu-link is-active" data-content="item-1">
+                                    <span data-title="item-1">Description</span>
+                                </button>
+                                <button class="tab-menu-link " data-content="item-2">
+                                    <span data-title="item-2">Details</span>
+                                </button>
+                                <button class="tab-menu-link" data-content="item-3">
+                                    <span data-title="item-3">Reviews</span>
+                                </button>
+
+                            </div>
+                            <div class="tab-bar-content is-active" id="item-1">
+                                <div class="full-desc1 ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industrys standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book.
+                                        It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with
+                                        the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently
+                                        with desktop publishing software like Aldus PageMaker including versions of
+                                        Lorem
+                                        Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry.
+                                        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+                                        when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book.
+                                        It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with
+                                        the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently
+                                        with desktop publishing software like Aldus PageMaker including versions of
+                                        Lorem
+                                        Ipsum.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="tab-bar-content" id="item-2">
+
+                                <div class="full-details">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa
+                                        qui officia deserunt mollit anim id est laborum.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Aenean vehicula, tortor gravida elementum tincidunt, justo lorem vestibulum
+                                            ex,
+                                            eget egestas arcu tellus in magna. Vivamus gravida, ipsum vel luctus luctus,
+                                            nisi felis vestibulum est, nec interdum tellus leo quis tellus. Sed sit amet
+                                            convallis enim, in laoreet orci.</li>
+                                        <li>Donec et elit at nulla congue interdum sit amet varius erat.</li>
+                                        <li>Nulla sit amet risus pellentesque, dignissim massa ut, dignissim arcu.</li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="tab-bar-content " id="item-3">
+
+                                <div class="full-review" id="item-3">
+                                    <div class="mat-list-item-content">
+                                        <div class="mat-list-item">
+                                            <img src="./assets/img/avatar-1.png" alt="">
+                                        </div>
+                                        <div class="mat-list-text">
+                                            <p><span>Martina Solsker</span></p>
+                                            <p><small>22 Mart, 2018 at 18:44</small> </p>
+                                            <p>Integer id eros et mi fringilla imperdiet. In dictum turpis eget magna
+                                                condimentum. Ut malesuada interdum ultrices. Proin tristiqu..
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="mat-list-item-content">
+                                        <div class="mat-list-item">
+                                            <img src="./assets/img/avatar-2.png" alt="">
+                                        </div>
+                                        <div class="mat-list-text">
+                                            <p><span>Deni Aniston</span></p>
+                                            <p><small>22 Mart, 2018 at 18:44</small> </p>
+                                            <p>Nulla accumsan, lacus sed suscipit rutrum, turpis augue accumsan metus,
+                                                in accumsan urna mi lorem. Pellentesque semper ni..
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="mat-list-item-content">
+                                        <div class="mat-list-item">
+                                            <img src="./assets/img/avatar-3.png" alt="">
+                                        </div>
+                                        <div class="mat-list-text">
+                                            <p><span>Simon Ladger</span></p>
+                                            <p><small>22 Mart, 2018 at 18:44</small> </p>
+                                            <p>Pellentesque hendrerit vel turpis aliquam . Suspendisse
+                                                ullamcorper feugiat. Etiam gravida metus ac massa posuere
+                                                ve..
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="form">
+
+                                        <div class="right">
+                                            <h3>LEAVE YOUR REVIEW</h3>
+                                            <div class="divider"></div>
+                                            <p>Your email address will not be published. Required fields are marked *
+                                            </p>
+                                            <h3 class="rating"><span>Your Rating:</span>
+                                                <button><i class="fa-regular fa-face-frown icon"></i></button>
+                                                <button><i class="fa-regular fa-face-meh"></i></button>
+                                                <button><i class="fa-regular fa-face-meh"></i></button>
+                                                <button><i class="fa-regular fa-face-smile"></i></button>
+                                                <button><i class="fa-regular fa-face-grin"></i></button>
+
+                                            </h3>
+                                            <form>
+                                                <div class="user-info">
+                                                    <div class="group inputs">
+                                                        <input required type="text">
+                                                        <span class="bar"></span>
+                                                        <label>Your Name (required) *</label>
+                                                        <span class="validation">Please enter a valid message</span>
+                                                    </div>
+
+                                                    <div class="group inputs">
+                                                        <input required type="text">
+                                                        <span class="bar"></span>
+                                                        <label>Your Email (required) *</label>
+                                                        <span class="validation">Please enter a valid message</span>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="group inputs">
+                                                    <input required type="text">
+                                                    <span class="bar"></span>
+                                                    <label>Subject *</label>
+                                                    <span class="validation">Please enter a valid message</span>
+                                                </div>
+
+                                                <div class="group textarea">
+                                                    <textarea required></textarea>
+                                                    <span class="bar"></span>
+                                                    <label>Post content *</label>
+                                                </div>
+
+                                                <button type="submit">Submit Review</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+        </section>
+
+
+
+        <section id="products">
+            <div class="container">
+                <div class="title">
+                    <h4>Featured Products</h4>
+                </div>
+
+                <div class=" cards">
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone2.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Dono Purple Wireless</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$100.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone4.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Ultra Whitte Wireless</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$350.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone5.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Solo Headset</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$235.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone6.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>ONTEC E Headset</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$175.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/laptop1.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Wireless Mondo</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$266.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/laptop2.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Wireless Mondo</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$266.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <section id="footer">
+            <div class="container mt-5">
+                <div class="row">
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-12 ">
+                        <div class="sophia">
+                            <a href=""> <img src="./assets/img/blac-logo-sophia.jfif" alt=""></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada fringilla
+                                sem, at
+                                dictum lectus ultricies quis. Etiam eu bibendum orci. Aliquam erat volutpat.
+                            </p>
+                            <div class="link">
+                                <a href="#">MORE ABOUT US</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        <div class="services">
+                            <h4>Services</h4>
+                        </div>
+                        <div class="service-list">
+                            <ul>
+                                <li><a href="">Hotel Growth</a></li>
+                                <li><a href="">Hotel Loan</a></li>
+                                <li><a href="">Financial Planning</a></li>
+                                <li><a href="">Insurance Consulting</a></li>
+                                <li><a href="">Retirenment Planing</a></li>
+                                <li><a href="">Tax Planing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 col1">
+                        <div class="subscribe">
+                            <h5>Subscribe Newsletter</h5>
+                        </div>
+                        <div class="form">
+                            <p>Get latest updates and offers.</p>
+                        </div>
+                        <div class="input">
+                            <input type="email" placeholder="Enter your email address">
+                        </div>
+                        <button><span>SUBSCRIBE US</span></button>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 col2">
+                        <div class="contact-us">
+                            <h5>Contact Us</h5>
+                            <div class="tel-box">
+                                <div class="icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Apple St, New York, NY 10012, USA</p>
+                                </div>
+                            </div>
+                            <div class="tel-box">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+
+                                </div>
+                                <div class="text">
+                                    <p>(018) 65 524 8503 / (125) 954 7854</p>
+                                </div>
+                            </div>
+                            <div class="tel-box">
+                                <div class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="text email">
+                                    <p>contact@lamarena.com</p>
+                                </div>
+                            </div>
+                            <div class="icons">
+                                <ul>
+                                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/db0b30a76d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/slick-1.8.1/slick/slick.js"></script>
+    <script src="./assets/js/productDetails.js"></script>
+</body>
+
+</html>
