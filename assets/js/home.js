@@ -70,8 +70,6 @@ $(document).ready(function () {
     })
 
 
-    //icons
-
 
 
 
@@ -85,24 +83,13 @@ $(document).ready(function () {
 
 
 
-    //basket icon 
-
-
-
-    $(document).on("click", "#nav-area .cart", function (e) {
-        e.preventDefault()
-
-        $(".spCard-dropdown").toggleClass("d-none");
-
-
-    });
 
 
 
 
 
 
-   
+
 
 
     //slider
@@ -203,6 +190,65 @@ $(document).ready(function () {
 
 
 
+    //modal
+
+
+    let icons = document.querySelectorAll(".tab-bar .cards .product-card .icons .eye-icon");
+
+    let cards = document.querySelectorAll(".tab-bar .cards .product-card");
+
+    let modal = document.querySelector(".tab-bar .moddal .modall");
+
+for (const card of cards) {
+    for (const icon of icons) {
+        icon.addEventListener("click", function () {
+
+            document.querySelector(".moddal").style.display="block"
+            document.querySelector(".modall").classList.remove("d-none")
+            document.querySelector(".moddal").classList.remove("d-none")
+            document.querySelector("#overlay").style.display="block";
+            document.body.style.overflow="hidden"
+
+           let prodImg = icon.parentNode.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src");
+            
+          let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
+          let prodPrice =   icon.parentNode.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
+          modal.querySelector(".img img").setAttribute("src",prodImg);
+
+        })
+    }
+    
+}
+
+
+
+    window.addEventListener("click",function(e){
+        if(e.target == document.querySelector(".moddal")){
+            document.querySelector(".moddal").classList.add("d-none")
+            document.querySelector(".modall").classList.add("d-none");
+            document.querySelector("#overlay").style.display="none";
+            this.document.body.style.overflow = "unset"
+        }
+    })
+
+
+    let iconDelete = document.querySelector(".modall .iconca a i");
+    iconDelete.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(".moddal").classList.add("d-none")
+        document.querySelector(".modall").classList.add("d-none")
+        document.querySelector("#overlay").style.display="none";
+        document.body.style.overflow = "unset"
+    })
+
+
+
+
+
+
+
+
+
 
 
     //basket
@@ -216,11 +262,11 @@ $(document).ready(function () {
         products = JSON.parse(localStorage.getItem("basket"));
 
     }
-
-
     cardBtns.forEach(btn => {
         btn.addEventListener("click", function (e) {
             e.preventDefault()
+            document.querySelector("#nav-area .chek-card-box .alert").classList.add("d-none")
+            document.querySelector("#nav-area .chek-card-box .subtotal").classList.remove("d-none")
 
             let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
             let productName = this.parentNode.parentNode.children[2].children[1].innerText;
@@ -229,9 +275,9 @@ $(document).ready(function () {
 
             let existProduct = products.find(m => m.id == productId);
 
-
             if (existProduct != undefined) {
                 existProduct.count += 1;
+                existProduct.price = productPrice * existProduct.count;
             }
             else {
 
@@ -249,18 +295,12 @@ $(document).ready(function () {
             localStorage.setItem("basket", JSON.stringify(products));
 
 
-            getBasketCount(products);
+            getBasketCount();
             chekCard()
             subTotal();
+            deleteIcons()
 
         })
-
-
-
-
-
-
-
     });
 
 
@@ -269,71 +309,123 @@ $(document).ready(function () {
 
 
 
-    function getBasketCount(arr) {
+    function getBasketCount() {
         let sum = 0;
 
-        for (const item of arr) {
+        for (const item of products) {
 
             sum += item.count;
         }
 
         document.querySelector(".count").innerText = sum;
+        document.querySelector(".check-card .count").innerText = sum + " ITEM";
 
     }
 
-    getBasketCount(products);
+    getBasketCount();
+
+
+    //basket icon 
+
+    $(document).on("click", "#nav-area .cart", function (e) {
+        e.preventDefault()
+
+        $(".chek-card-box").toggleClass("d-none");
+
+
+    });
 
 
 
 
-//Check-card
 
-function chekCard(){
-    let chekCard = document.querySelector("#nav-area .spCard-dropdown")
+    //Check-card
 
-    chekCard.innerHTML ="";
-    for (const product of products) {
-    
+    function chekCard() {
+        let chekCard = document.querySelector("#nav-area .chek-card-item")
 
-        chekCard.innerHTML+= `
+        chekCard.innerHTML = "";
+        for (const product of products) {
+            let nativePrice = product.price / product.count;
+            document.querySelector("#nav-area .chek-card-box .alert").classList.add("d-none")
+            document.querySelector("#nav-area .chek-card-box .subtotal").classList.remove("d-none")
+            chekCard.classList.remove("d-none")
+
+            chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-    <div class="border"></div>
-    <div class="product-detail">
-    <div class="text">
-        <p>${product.name}</p>
-        <span>${product.count} x ${product.price}</span>
-    </div>
-    <div class="icon">
-        <i class="fa-solid fa-trash-can"></i>
-    </div>
-    
-    </div>
-    <div class="border"></div>
-    </div>
-    `
+            <div class="border"></div>
+            <div class="product-detail">
+                <div class="text">
+                    <p>${product.name}</p>
+                    <span>${product.count} x ${nativePrice}</span>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-trash-can delete-icon"></i>
+                </div>
+            </div>
+        </div>
+       `
+        }
+
     }
-}
 
 
-chekCard()
-
-function subTotal(){
-    let sum = 0;
- for (const product of products) {
-   
-    product.price= product.price * product.count;
-    sum+=product.price;
- }
- document.querySelector(".subtotal span").innerText = `$ ${sum}`;
-
-}
-
-subTotal();
+    chekCard()
 
 
+    //checkCard total
+
+    function subTotal() {
+        let sum = 0;
+        for (const product of products) {
+            sum += product.price;
+        }
+        document.querySelector(".subtotal span").innerText = `$${sum}.00`;
+        document.querySelector(".basket-subtotal ").innerText = `$${sum}.00`;
+
+    }
+
+    subTotal();
 
 
 
+
+    //delete from check card
+
+    function deleteFromChekCard(id) {
+        products = products.filter(m => m.id != id)
+
+        localStorage.setItem("basket", JSON.stringify(products));
+        subTotal();
+        getBasketCount()
+    }
+
+
+
+
+    function deleteIcons() {
+        let deletIcons = document.querySelectorAll("#nav-area .chek-card-box .chek-card-item .icon .delete-icon");
+        deletIcons.forEach(deletIcon => {
+
+            deletIcon.addEventListener("click", function () {
+                let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
+                deleteFromChekCard(id);
+                this.parentNode.parentNode.remove();
+                // this.parentNode.parentNode.previousElementSibling.classList.add("d-none");
+                // document.querySelector(".border").classList.add("d-none");
+
+
+                if (products.length == 0) {
+                    localStorage.removeItem("basket")
+                    document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
+                    document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                }
+
+            })
+        });
+    }
+
+    deleteIcons();
 
 
 
