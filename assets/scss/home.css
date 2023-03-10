@@ -728,6 +728,9 @@ body {
 .product-card .icons i:hover {
   color: #EF6C00;
 }
+.product-card .icons .added {
+  color: #EF6C00;
+}
 .product-card .card-text {
   margin: 35px 0 0 20px;
 }
@@ -828,6 +831,7 @@ body {
   font-size: 17px;
   font-weight: bold;
   color: rgb(140, 139, 139);
+  text-decoration: line-through;
 }
 .modall .texts .price2 p {
   color: red;

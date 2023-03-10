@@ -199,34 +199,37 @@ $(document).ready(function () {
 
     let modal = document.querySelector(".tab-bar .moddal .modall");
 
-for (const card of cards) {
-    for (const icon of icons) {
-        icon.addEventListener("click", function () {
+    for (const card of cards) {
+        for (const icon of icons) {
+            icon.addEventListener("click", function () {
 
-            document.querySelector(".moddal").style.display="block"
-            document.querySelector(".modall").classList.remove("d-none")
-            document.querySelector(".moddal").classList.remove("d-none")
-            document.querySelector("#overlay").style.display="block";
-            document.body.style.overflow="hidden"
+                document.querySelector(".moddal").style.display = "block"
+                document.querySelector(".modall").classList.remove("d-none")
+                document.querySelector(".moddal").classList.remove("d-none")
+                document.querySelector("#overlay").style.display = "block";
+                document.body.style.overflow = "hidden"
 
-           let prodImg = icon.parentNode.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src");
-            
-          let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
-          let prodPrice =   icon.parentNode.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
-          modal.querySelector(".img img").setAttribute("src",prodImg);
+                let prodImg = icon.parentNode.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src");
 
-        })
+                let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
+                let prodPrice = icon.parentNode.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
+                modal.querySelector(".img img").setAttribute("src", prodImg);
+                modal.querySelector(".text1 h2").innerText = prodName;
+                modal.querySelector(".texts .price1 del").innerText = prodPrice * 2;
+                modal.querySelector(".text2 p").innerText = "$" + prodPrice;
+
+            })
+        }
+
     }
-    
-}
 
 
 
-    window.addEventListener("click",function(e){
-        if(e.target == document.querySelector(".moddal")){
+    window.addEventListener("click", function (e) {
+        if (e.target == document.querySelector(".moddal")) {
             document.querySelector(".moddal").classList.add("d-none")
             document.querySelector(".modall").classList.add("d-none");
-            document.querySelector("#overlay").style.display="none";
+            document.querySelector("#overlay").style.display = "none";
             this.document.body.style.overflow = "unset"
         }
     })
@@ -237,7 +240,7 @@ for (const card of cards) {
         e.preventDefault();
         document.querySelector(".moddal").classList.add("d-none")
         document.querySelector(".modall").classList.add("d-none")
-        document.querySelector("#overlay").style.display="none";
+        document.querySelector("#overlay").style.display = "none";
         document.body.style.overflow = "unset"
     })
 
@@ -427,6 +430,78 @@ for (const card of cards) {
 
     deleteIcons();
 
+
+
+
+
+
+
+    //WISHLIST
+
+
+
+    let heartIcons = document.querySelectorAll("#tab-menu .tab-bar .product-card .icons .heart")
+
+
+    let productsWishlist = [];
+
+    if (localStorage.getItem("wishlist") != null) {
+        productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+    }
+    heartIcons.forEach(icon => {
+
+        icon.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
+
+            let productName = this.parentNode.nextElementSibling.children[1].innerText;
+
+            let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
+
+            let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+            let existProduct = productsWishlist.find(m => m.id == productId);
+
+
+            if (existProduct != undefined) {
+                productsWishlist = productsWishlist.filter(m => m.id != productId);
+                icon.classList.add("fa-regular");
+                icon.classList.remove("fa-solid", "added")
+            }
+            else {
+                productsWishlist.push({
+                    id: productId,
+                    img: productImage,
+                    name: productName,
+                    price: productPrice,
+
+
+                })
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid", "added")
+
+
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
+
+
+        })
+
+
+
+        if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid", "added");
+
+        } else {
+
+            icon.classList.add("fa-regular");
+            icon.classList.remove("fa-solid", "added");
+        }
+    });
 
 
 
