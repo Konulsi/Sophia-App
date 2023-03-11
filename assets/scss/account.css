@@ -300,6 +300,7 @@ p {
   right: 22px;
   top: 34px;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-area .cal-bucket .cart:hover {
   background-color: #d2700f;
@@ -424,12 +425,14 @@ p {
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-down .down .item:hover {
   background-color: rgba(217, 213, 213, 0.5);
 }
 #nav-down .down .pages {
   position: relative;
+  cursor: pointer;
 }
 #nav-down .down .pages i {
   position: absolute;
@@ -781,6 +784,7 @@ p {
   }
   #nav-area .cal-bucket .cart {
     margin-right: 85px;
+    cursor: pointer;
   }
   .swiper-slide .shop {
     width: 180px;

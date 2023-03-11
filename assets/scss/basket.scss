@@ -387,6 +387,9 @@ a{
             position: absolute;
             right: 22px;
             top: 34px;
+            &:hover {
+                background-color: #d2700f;
+            }
 
             i {
                 color: white;
@@ -545,7 +548,7 @@ a{
             align-items: center;
             transition: all 0.4s;
             color: #383838;
-
+            cursor: pointer;
             &:hover {
                 background-color: rgb(217 213 213 / 50%);
             }
@@ -553,7 +556,7 @@ a{
 
         .pages {
             position: relative;
-
+            cursor: pointer;
             i {
                 position: absolute;
                 bottom: 27px;
@@ -570,7 +573,7 @@ a{
             top: 60px;
             left: 500px;
             padding: 3px 0 3px 0;
-
+            z-index: 20;
             border: 1px solid white;
             border-radius: 5px;
             box-shadow: rgb(0 0 0 / 8%) 0px 5px 15px;

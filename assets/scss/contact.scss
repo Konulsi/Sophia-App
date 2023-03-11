@@ -376,7 +376,7 @@ p {
             right: 22px;
             top: 34px;
             transition: all 0.4s;
-
+            cursor: pointer;
             &:hover {
                 background-color: #d2700f;
             }
@@ -532,7 +532,7 @@ p {
             justify-content: center;
             align-items: center;
             transition: all 0.4s;
-
+            cursor: pointer;
 
 
             &:hover {
@@ -542,7 +542,7 @@ p {
 
         .pages {
             position: relative;
-
+            cursor: pointer;
             i {
                 position: absolute;
                 bottom: 27px;
@@ -561,7 +561,6 @@ p {
             top: 60px;
             left: 465px;
             padding: 3px 0 3px 0;
-
             border: 1px solid white;
             border-radius: 5px;
             box-shadow: rgb(0 0 0 / 8%) 0px 5px 15px;

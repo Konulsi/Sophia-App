@@ -58,43 +58,43 @@ $(document).ready(function () {
   })
 
 
-  
-//areanin kenarina toxunanda hemin hissenin silinmesi
 
-document.addEventListener("click", function (e) {
-      
+  //areanin kenarina toxunanda hemin hissenin silinmesi
 
-  if(!!!e.target.closest(".language")){
+  document.addEventListener("click", function (e) {
+
+
+    if (!!!e.target.closest(".language")) {
       if (!$(".language-area").hasClass("d-none")) {
-          $(".language-area").addClass("d-none")
+        $(".language-area").addClass("d-none")
       }
-  }
+    }
 
-  
-  if(!!!e.target.closest(".currency")){
+
+    if (!!!e.target.closest(".currency")) {
       if (!$(".valyuta").hasClass("d-none")) {
-          $(".valyuta").addClass("d-none")
+        $(".valyuta").addClass("d-none")
       }
-  }
+    }
 
-  
 
-  if(!!!e.target.closest(".cart")){
+
+    if (!!!e.target.closest(".cart")) {
       if (!$(".chek-card-box").hasClass("d-none")) {
-          $(".chek-card-box").addClass("d-none")
+        $(".chek-card-box").addClass("d-none")
       }
-  }
+    }
 
 
-  if(!!!e.target.closest(".pages")){
-      if(!$(".pages-list").hasClass("d-none")){
-          $(".pages-list").addClass("d-none")
+    if (!!!e.target.closest(".pages")) {
+      if (!$(".pages-list").hasClass("d-none")) {
+        $(".pages-list").addClass("d-none")
       }
-  }
+    }
 
-  
- 
-})
+
+
+  })
 
 
 
@@ -114,9 +114,9 @@ document.addEventListener("click", function (e) {
   $(document).on("click", ".pages", function (e) {
     e.preventDefault();
     $(".pages-list").toggleClass("d-none");
-})
+  })
 
-  
+
 
 
 
@@ -193,9 +193,7 @@ document.addEventListener("click", function (e) {
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
+
     ]
   });
 
@@ -468,28 +466,101 @@ document.addEventListener("click", function (e) {
 
 
 
-    //product detail
+  // home da click olunub locala elave edilen productu productdetailde gostermek
 
-    let productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
+  let productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
 
-    for (const productDetail of productsDetail) {
-      document.querySelector("#product-details .photo-product img").setAttribute("src", productDetail.img);
-      document.querySelector("#product-details .product-area .product-info h2").innerText = productDetail.name;
-      document.querySelector("#product-details .product-area .product-info del").innerText = "$" + productDetail.price;
-      document.querySelector("#product-details .product-area .product-info h3").innerText = "$" + productDetail.price / 2;
-      
-      if(products != null){
-        for (const product of products) {
-          if(product.img == productDetail.img)
+  for (const productDetail of productsDetail) {
+    document.querySelector("#breadcrumb-section .carts .left h4").innerText = productDetail.name;
+    document.querySelector("#product-details .photo-product img").setAttribute("src", productDetail.img);
+    document.querySelector("#product-details .product-area .product-info h2").innerText = productDetail.name;
+    document.querySelector("#product-details .product-area .product-info del").innerText = "$" + productDetail.price;
+    document.querySelector("#product-details .product-area .product-info h3").innerText = "$" + productDetail.price / 2;
+
+    if (products != null) {
+      for (const product of products) {
+        if (product.img == productDetail.img)
           document.querySelector(".product-count input").value = product.count;
-        }
       }
-  
     }
 
+  }
 
 
 
+
+
+//productDetailsdeki productlari wishliste add etmek  //WISHLIST
+
+  function clickIconWishlist() {
+    let heartIcons = document.querySelectorAll("#products .cards .product-card .icons .heart")
+
+    console.log(heartIcons);
+
+    let productsWishlist = [];
+
+    if (localStorage.getItem("wishlist") != null) {
+        productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+    }
+    heartIcons.forEach(icon => {
+
+        icon.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
+
+            let productName = this.parentNode.nextElementSibling.children[1].innerText;
+
+            let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[1].innerText);
+
+            let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+            let existProduct = productsWishlist.find(m => m.id == productId);
+
+
+            if (existProduct != undefined) {
+                productsWishlist = productsWishlist.filter(m => m.id != productId);
+                icon.classList.add("fa-regular");
+                icon.classList.remove("fa-solid", "added")
+            }
+            else {
+                productsWishlist.push({
+                    id: productId,
+                    img: productImage,
+                    name: productName,
+                    price: productPrice,
+
+
+                })
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid", "added")
+
+
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
+
+
+        })
+
+
+
+        if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid", "added");
+
+        } else {
+
+            icon.classList.add("fa-regular");
+            icon.classList.remove("fa-solid", "added");
+        }
+    });
+
+
+}
+
+clickIconWishlist();
 
 
 

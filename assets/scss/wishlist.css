@@ -301,6 +301,9 @@ a {
   right: 22px;
   top: 34px;
 }
+#nav-area .cal-bucket .cart:hover {
+  background-color: #d2700f;
+}
 #nav-area .cal-bucket .cart i {
   color: white;
   font-size: 19px;
@@ -420,6 +423,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-down .down .item:hover {
   background-color: rgba(217, 213, 213, 0.5);
@@ -444,6 +448,7 @@ a {
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
+  z-index: 1;
 }
 #nav-down .down .pages-list a {
   -webkit-user-select: none;

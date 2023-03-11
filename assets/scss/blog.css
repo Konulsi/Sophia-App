@@ -424,12 +424,14 @@ p {
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-down .down .item:hover {
   background-color: rgba(217, 213, 213, 0.5);
 }
 #nav-down .down .pages {
   position: relative;
+  cursor: pointer;
 }
 #nav-down .down .pages i {
   position: absolute;

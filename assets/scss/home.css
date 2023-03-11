@@ -300,6 +300,7 @@ p {
   right: 22px;
   top: 34px;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-area .cal-bucket .cart:hover {
   background-color: #d2700f;
@@ -424,12 +425,14 @@ p {
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #nav-down .down .item:hover {
   background-color: rgba(217, 213, 213, 0.5);
 }
 #nav-down .down .pages {
   position: relative;
+  cursor: pointer;
 }
 #nav-down .down .pages i {
   position: absolute;
@@ -704,7 +707,7 @@ body {
 }
 
 .slick-slide {
-  width: 256px !important;
+  width: 225px !important;
 }
 
 .slick-track {
@@ -1359,7 +1362,63 @@ body {
     padding-top: 4px;
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media all and (min-width: 575px) and (max-width: 631px) {
+  #nav-up {
+    height: 80px;
+  }
+  #nav-up .left {
+    left: 90px;
+  }
+  #nav-up .left .language {
+    margin-left: 45px;
+  }
+  #nav-up .left .language span {
+    display: none !important;
+  }
+  #nav-up .left .language i {
+    position: absolute;
+    left: -15px;
+    top: 3px;
+  }
+  #nav-area .input-area {
+    position: relative;
+    bottom: 30px;
+  }
+  #nav-area .input-area input {
+    width: 60%;
+  }
+  #nav-area .input-area .btn-search {
+    width: 100px;
+  }
+  #nav-area .logo {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  #nav-area .cal-bucket {
+    bottom: 40px;
+  }
+  #nav-area .cal-bucket .div-icon {
+    margin-left: 55px !important;
+  }
+  .swiper-slide .shop {
+    width: 180px;
+    bottom: 30px;
+    left: 15px;
+  }
+  .swiper-slide h3 {
+    bottom: 70px !important;
+    left: 16px !important;
+  }
+  .swiper-slide h1 {
+    top: 80px !important;
+    left: 15px !important;
+    font-size: 29px !important;
+  }
+  .swiper-slide .text {
+    font-size: 33px;
+  }
+}
+@media all and (min-width: 576px) and (max-width: 768px) {
   #nav-up {
     height: 80px;
   }

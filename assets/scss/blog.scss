@@ -437,39 +437,42 @@ p {
         }
 
 
-        .check-card{
+        .check-card {
             height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .product-detail{
+        .product-detail {
             display: flex;
             justify-content: space-between;
             padding: 7px;
 
-            .text{
-                p{
+            .text {
+                p {
                     font-weight: 500;
                     font-size: 18px;
-                    font-family: Roboto,Arial,Helvetica,sans-serif;
+                    font-family: Roboto, Arial, Helvetica, sans-serif;
                 }
-                span{
+
+                span {
                     color: #777;
                     font-size: 15px;
                     margin-top: 5px;
                     display: block;
                 }
             }
+
             .icon {
                 cursor: pointer;
-               
-                &:hover{
-                    i{
-                        color:  #d2700f;
+
+                &:hover {
+                    i {
+                        color: #d2700f;
                     }
                 }
+
                 i {
                     transition: all 0.5s;
                     color: #c3c3c3;
@@ -480,18 +483,19 @@ p {
             }
         }
 
-        .subtotal{
+        .subtotal {
             height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            span{
+
+            span {
                 font-weight: 600;
                 font-size: 18px;
             }
         }
 
-     
+
 
         .alert {
             height: 1px;
@@ -532,7 +536,7 @@ p {
             justify-content: center;
             align-items: center;
             transition: all 0.4s;
-
+            cursor: pointer;
 
 
             &:hover {
@@ -542,6 +546,7 @@ p {
 
         .pages {
             position: relative;
+            cursor: pointer;
 
             i {
                 position: absolute;
@@ -659,13 +664,14 @@ p {
 
 
 #img-text {
-    .text1{
+    .text1 {
         margin-top: 60px;
     }
 
     .text-icon {
         margin-top: 15px;
     }
+
     .textss1 {
 
         .img1 {
@@ -814,8 +820,9 @@ p {
 
         .text2 {
             margin-top: 20px;
+
             p {
-            margin-top: 20px;
+                margin-top: 20px;
 
                 width: 100%;
             }
@@ -838,7 +845,7 @@ p {
 
         .text-icon {
             display: flex;
-           
+
             .icon1 {
                 display: flex;
 
@@ -886,6 +893,7 @@ p {
 
         .text2 {
             margin-top: 20px;
+
             p {
                 width: 100%;
             }
@@ -959,6 +967,7 @@ p {
 
         .text2 {
             margin-top: 20px;
+
             p {
                 width: 100%;
             }
@@ -1046,15 +1055,15 @@ p {
                 text-decoration: none;
                 color: #000;
 
-                &:nth-child(2){
-                    p{
+                &:nth-child(2) {
+                    p {
                         font-size: 16px;
                         font-weight: 500;
-                        
+
                     }
                 }
 
-                
+
             }
 
             p {
@@ -1063,9 +1072,9 @@ p {
 
                 &:nth-child(3) {
                     font-size: 14px;
-                   
+
                     font-weight: 400;
-                   
+
                 }
 
             }
@@ -1678,7 +1687,7 @@ p {
 
 
 
-@media all and  (min-width: 576px) and (max-width: 769px) {
+@media all and (min-width: 576px) and (max-width: 769px) {
     #nav-up {
         height: 80px;
 
@@ -1687,6 +1696,7 @@ p {
 
             .language {
                 margin-left: 30px !important;
+
                 span {
                     display: none !important;
                 }
@@ -1722,8 +1732,8 @@ p {
             justify-content: center !important;
         }
 
-        .img-log{
-            img{
+        .img-log {
+            img {
                 width: 100px;
                 height: 50px;
             }
@@ -1871,6 +1881,7 @@ p {
 
             .contact-us {
                 letter-spacing: -1px;
+
                 .tel-box {
                     .text {
                         p {

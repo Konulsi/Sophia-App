@@ -61,43 +61,43 @@ $(document).ready(function () {
     })
 
 
-    
-//areanin kenarina toxunanda hemin hissenin silinmesi
 
-document.addEventListener("click", function (e) {
-      
+    //areanin kenarina toxunanda hemin hissenin silinmesi
 
-    if(!!!e.target.closest(".language")){
-        if (!$(".language-area").hasClass("d-none")) {
-            $(".language-area").addClass("d-none")
+    document.addEventListener("click", function (e) {
+
+
+        if (!!!e.target.closest(".language")) {
+            if (!$(".language-area").hasClass("d-none")) {
+                $(".language-area").addClass("d-none")
+            }
         }
-    }
 
-    
-    if(!!!e.target.closest(".currency")){
-        if (!$(".valyuta").hasClass("d-none")) {
-            $(".valyuta").addClass("d-none")
+
+        if (!!!e.target.closest(".currency")) {
+            if (!$(".valyuta").hasClass("d-none")) {
+                $(".valyuta").addClass("d-none")
+            }
         }
-    }
 
-    
 
-    if(!!!e.target.closest(".cart")){
-        if (!$(".chek-card-box").hasClass("d-none")) {
-            $(".chek-card-box").addClass("d-none")
+
+        if (!!!e.target.closest(".cart")) {
+            if (!$(".chek-card-box").hasClass("d-none")) {
+                $(".chek-card-box").addClass("d-none")
+            }
         }
-    }
 
 
-    if(!!!e.target.closest(".pages")){
-        if(!$(".pages-list").hasClass("d-none")){
-            $(".pages-list").addClass("d-none")
+        if (!!!e.target.closest(".pages")) {
+            if (!$(".pages-list").hasClass("d-none")) {
+                $(".pages-list").addClass("d-none")
+            }
         }
-    }
 
-    
-   
-})
+
+
+    })
 
 
 
@@ -137,7 +137,7 @@ document.addEventListener("click", function (e) {
 
 
 
-    
+
 
 
 
@@ -306,7 +306,7 @@ document.addEventListener("click", function (e) {
                 let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
                 deleteFromChekCard(id);
                 this.parentNode.parentNode.remove();
-              
+
 
 
                 if (products.length == 0) {
@@ -328,90 +328,83 @@ document.addEventListener("click", function (e) {
 
 
 
+    //WISLIST
 
 
+    let tableBodyWislist = document.querySelector("#products .wishlist-products table tbody");
+    let wishlist = JSON.parse(localStorage.getItem("wishlist"));
 
+    function getWishlistDatas() {
 
-    //wishlist
+        if (wishlist != null) {
+            for (const product of wishlist) {
 
-
-       
-//WISLIST
-
-
-let tableBodyWislist = document.querySelector("#products .wishlist-products table tbody");
-let wishlist = JSON.parse(localStorage.getItem("wishlist"));
-
-function getWishlistDatas() {
-
-    if (wishlist != null) {
-        for (const product of wishlist) {
-
-            tableBodyWislist.innerHTML += `<tr data-id="${product.id}">
+                tableBodyWislist.innerHTML += `<tr data-id="${product.id}">
         <td><img src="${product.img}" alt=""></td>
         <td><a href="">${product.name}</a></td>
         <td class="price">${product.price}.00</td>
         <td><i class="fa-solid fa-x delete"></i></td>
       </tr>`
 
-        }
+            }
 
-    } else {
-        showAlertWishlist()
-    }
-
-}
-
-getWishlistDatas();
-
-function showAlertWishlist() {
-    document.querySelector(".wishlist-products .table").classList.add("d-none");
-    document.querySelector("#products .show-alert").classList.remove("d-none")
-}
-
-
-
-function deleteProductFromWishlistStorage(id) {
-    wishlist = wishlist.filter(m => m.id != id);
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-
-
-}
-
-
-
-function deleteWishlistProduct() {
-let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-products table tbody .delete")
-deleteIconsWishlist.forEach(deleteIcon => {
-    deleteIcon.addEventListener("click", function () {
-
-        let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
-
-        deleteProductFromWishlistStorage(id);
-        this.parentNode.parentNode.remove();
-
-        if (wishlist.length == 0) {
+        } else {
             showAlertWishlist()
         }
-    })
 
-});
+    }
 
-}
-deleteWishlistProduct();
+    getWishlistDatas();
+
+    function showAlertWishlist() {
+        document.querySelector(".wishlist-products .table").classList.add("d-none");
+        document.querySelector("#products .show-alert").classList.remove("d-none")
+    }
 
 
 
-function clearAllProductsWishlist(){
-    let clearBtn=document.querySelector("#products .wishlist-products table .clear-btn")
-    clearBtn.addEventListener("click",function(){
-        localStorage.removeItem("wishlist");
-       
-        showAlertWishlist()
-    })
-}
+    function deleteProductFromWishlistStorage(id) {
+        wishlist = wishlist.filter(m => m.id != id);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
-clearAllProductsWishlist();
+
+    }
+
+
+
+    function deleteWishlistProduct() {
+        let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-products table tbody .delete")
+        deleteIconsWishlist.forEach(deleteIcon => {
+            deleteIcon.addEventListener("click", function () {
+
+                let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+                deleteProductFromWishlistStorage(id);
+                this.parentNode.parentNode.remove();
+
+                if (wishlist.length == 0) {
+                    localStorage.removeItem("wishlist")
+                    showAlertWishlist()
+                }
+            })
+
+        });
+
+    }
+    deleteWishlistProduct();
+
+
+
+    function clearAllProductsWishlist() {
+        let clearBtn = document.querySelector("#products .wishlist-products table .clear-btn")
+        clearBtn.addEventListener("click", function () {
+            localStorage.removeItem("wishlist");
+
+            showAlertWishlist()
+        })
+    }
+
+    clearAllProductsWishlist();
 
 
 
@@ -422,7 +415,7 @@ clearAllProductsWishlist();
 
 
 
-   
+
 
 
 

@@ -259,6 +259,7 @@ $(document).ready(function () {
 
 
 
+
     window.addEventListener("click", function (e) {
         if (e.target == document.querySelector(".moddal")) {
             document.querySelector(".moddal").classList.add("d-none")
@@ -281,36 +282,7 @@ $(document).ready(function () {
 
 
 
-    //product detail
 
-    let productsDetail =[];
-
-    if (localStorage.getItem("productsDetail") != null) {
-        productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
-
-    }
-
-
-    let productImgs = document.querySelectorAll(".cards .img-area");
-
-    for (const productImg of productImgs) {
-        productImg.addEventListener("click", function(){
-
-            let prodImg = this.firstElementChild.firstElementChild.getAttribute("src");
-            let prodName = this.nextElementSibling.nextElementSibling.lastElementChild.innerText;
-            let prodPrice = this.nextElementSibling.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
-            
-            productsDetail.push({
-                img: prodImg,
-                name: prodName,
-                price: prodPrice
-            })
-
-            localStorage.setItem("productsDetail", JSON.stringify(productsDetail));
-            
-
-        })
-    }
 
 
 
@@ -569,5 +541,42 @@ $(document).ready(function () {
 
 
 
+
+
+    
+   //product detail locala add etmek ve product detailde hemin productu gostermek
+
+    let productsDetail =[];
+
+    if (localStorage.getItem("productsDetail") != null) {
+        productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
+
+    }
+
+
+    let productImgs = document.querySelectorAll(".cards .img-area");
+
+    for (const productImg of productImgs) {
+        productImg.addEventListener("click", function(){
+
+            let prodImg = this.firstElementChild.firstElementChild.getAttribute("src");
+            let prodName = this.nextElementSibling.nextElementSibling.lastElementChild.innerText;
+            let prodPrice = this.nextElementSibling.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
+            
+            productsDetail.push({
+                img: prodImg,
+                name: prodName,
+                price: prodPrice
+            })
+
+            localStorage.setItem("productsDetail", JSON.stringify(productsDetail));
+            
+
+        })
+    }
+
+
+
+    
 
 })

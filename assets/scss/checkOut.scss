@@ -531,8 +531,7 @@ p {
             justify-content: center;
             align-items: center;
             transition: all 0.4s;
-
-
+            cursor: pointer;
 
             &:hover {
                 background-color: rgb(217 213 213 / 50%);
@@ -541,7 +540,7 @@ p {
 
         .pages {
             position: relative;
-
+            cursor: pointer;
             i {
                 position: absolute;
                 bottom: 27px;
