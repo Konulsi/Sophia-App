@@ -62,15 +62,44 @@ $(document).ready(function () {
 
 
 
-    window.addEventListener('click', function(e){   
-        if (document.querySelector('language-area').contains(e.target)){
-          // Clicked in box
-        } else{
-          // Clicked outside the box
+//areanin kenarina toxunanda hemin hissenin silinmesi
+
+    document.addEventListener("click", function (e) {
+      
+
+        if(!!!e.target.closest(".language")){
+            if (!$(".language-area").hasClass("d-none")) {
+                $(".language-area").addClass("d-none")
+            }
         }
-      });
+
+        
+        if(!!!e.target.closest(".currency")){
+            if (!$(".valyuta").hasClass("d-none")) {
+                $(".valyuta").addClass("d-none")
+            }
+        }
+
+        
+
+        if(!!!e.target.closest(".cart")){
+            if (!$(".chek-card-box").hasClass("d-none")) {
+                $(".chek-card-box").addClass("d-none")
+            }
+        }
 
 
+        if(!!!e.target.closest(".pages")){
+            if(!$(".pages-list").hasClass("d-none")){
+                $(".pages-list").addClass("d-none")
+            }
+        }
+
+        
+       
+    })
+
+ 
 
 
 
@@ -191,9 +220,7 @@ $(document).ready(function () {
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+
         ]
     });
 
@@ -427,7 +454,7 @@ $(document).ready(function () {
                 let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
                 deleteFromChekCard(id);
                 this.parentNode.parentNode.remove();
-               
+
 
                 if (products.length == 0) {
                     localStorage.removeItem("basket")
@@ -450,32 +477,32 @@ $(document).ready(function () {
 
     //WISHLIST
 
-    function clickIconWishlist(){
+    function clickIconWishlist() {
         let heartIcons = document.querySelectorAll("#tab-menu .tab-bar .product-card .icons .heart")
 
 
         let productsWishlist = [];
-    
+
         if (localStorage.getItem("wishlist") != null) {
             productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
-    
+
         }
         heartIcons.forEach(icon => {
-    
+
             icon.addEventListener("click", function (e) {
-    
+
                 e.preventDefault();
                 let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
-    
+
                 let productName = this.parentNode.nextElementSibling.children[1].innerText;
-    
+
                 let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
-    
+
                 let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
-    
+
                 let existProduct = productsWishlist.find(m => m.id == productId);
-    
-    
+
+
                 if (existProduct != undefined) {
                     productsWishlist = productsWishlist.filter(m => m.id != productId);
                     icon.classList.add("fa-regular");
@@ -487,38 +514,38 @@ $(document).ready(function () {
                         img: productImage,
                         name: productName,
                         price: productPrice,
-    
-    
+
+
                     })
                     icon.classList.remove("fa-regular");
                     icon.classList.add("fa-solid", "added")
-    
-    
+
+
                 }
-    
+
                 localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
-    
-    
+
+
             })
-    
-    
-    
+
+
+
             if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
                 icon.classList.remove("fa-regular");
                 icon.classList.add("fa-solid", "added");
-    
+
             } else {
-    
+
                 icon.classList.add("fa-regular");
                 icon.classList.remove("fa-solid", "added");
             }
         });
-    
-    
+
+
     }
 
     clickIconWishlist();
-   
+
 
 
 

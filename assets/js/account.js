@@ -61,6 +61,45 @@ $(document).ready(function () {
     })
 
 
+    
+//areanin kenarina toxunanda hemin hissenin silinmesi
+
+document.addEventListener("click", function (e) {
+      
+
+    if(!!!e.target.closest(".language")){
+        if (!$(".language-area").hasClass("d-none")) {
+            $(".language-area").addClass("d-none")
+        }
+    }
+
+    
+    if(!!!e.target.closest(".currency")){
+        if (!$(".valyuta").hasClass("d-none")) {
+            $(".valyuta").addClass("d-none")
+        }
+    }
+
+    
+
+    if(!!!e.target.closest(".cart")){
+        if (!$(".chek-card-box").hasClass("d-none")) {
+            $(".chek-card-box").addClass("d-none")
+        }
+    }
+
+
+    if(!!!e.target.closest(".pages")){
+        if(!$(".pages-list").hasClass("d-none")){
+            $(".pages-list").addClass("d-none")
+        }
+    }
+
+    
+   
+})
+
+
 
     //overlay
 
