@@ -870,6 +870,15 @@ body {
 
 
 
+.slick-slide{
+    width: 256px !important;
+
+}
+
+.slick-track{
+    width: 2048px !important;
+}
+
 //tab-menu-content1
 
 .product-card {
@@ -877,7 +886,11 @@ body {
     position: relative;
     border-radius: 5px;
 
-
+    &:hover{
+        .icons{
+            display: flex;
+        }
+    }
     .img-area {
 
         display: flex;
@@ -901,10 +914,13 @@ body {
         position: absolute;
         top: 30px;
         right: 20px;
+        display: none;
 
         i {
             font-size: 20px;
             cursor: pointer;
+            transition: all 0.5s;
+
             &:hover {
                 color: #EF6C00;
             }
@@ -958,11 +974,12 @@ body {
             width: 100%;
             margin-bottom: 15px;
             font-size: 15px;
-
+            transition: all 0.5s;
             &:hover {
                 border: 3px solid #EF6C00;
                 background-color: white;
                 color: #EF6C00;
+                
 
                 i {
                     color: #EF6C00;

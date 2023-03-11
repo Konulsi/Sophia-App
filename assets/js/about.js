@@ -121,16 +121,8 @@ $(document).ready(function () {
 
     $(document).on("click", ".pages", function (e) {
         e.preventDefault();
-        $(".pages-list").removeClass("d-none");
+        $(".pages-list").toggleClass("d-none");
     })
-
-
-
-
-    //basket icon 
-
-
-
 
 
 

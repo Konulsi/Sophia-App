@@ -30,8 +30,6 @@ p {
 
 
         //responsiv navbar
-
-
         .hamburger-menu {
             position: absolute;
             left: 25px;
@@ -437,53 +435,56 @@ p {
         }
 
 
-        .check-card{
+        .check-card {
             height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .product-detail{
+        .product-detail {
             display: flex;
             justify-content: space-between;
             padding: 7px;
 
-            .text{
-                p{
+            .text {
+                p {
                     font-weight: 500;
                     font-size: 18px;
-                    font-family: Roboto,Arial,Helvetica,sans-serif;
+                    font-family: Roboto, Arial, Helvetica, sans-serif;
                 }
-                span{
+
+                span {
                     color: #777;
                     font-size: 15px;
                     margin-top: 5px;
                     display: block;
                 }
             }
-            .icon{
-                i{
+
+            .icon {
+                i {
                     color: #c3c3c3;
                     font-size: 17px;
                     margin-top: 8px;
                 }
-               
+
             }
         }
 
-        .subtotal{
+        .subtotal {
             height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            span{
+
+            span {
                 font-weight: 600;
                 font-size: 18px;
             }
         }
 
-        
+
 
         .alert {
             height: 1px;
@@ -493,7 +494,7 @@ p {
         }
 
 
-     
+
 
 
 
@@ -1211,7 +1212,7 @@ p {
 
 
 
-@media all and  (min-width: 576px) and (max-width: 769px) {
+@media all and (min-width: 576px) and (max-width: 769px) {
     #nav-up {
         height: 80px;
 
@@ -1220,6 +1221,7 @@ p {
 
             .language {
                 margin-left: 30px !important;
+
                 span {
                     display: none !important;
                 }
@@ -1255,8 +1257,8 @@ p {
             justify-content: center !important;
         }
 
-        .img-log{
-            img{
+        .img-log {
+            img {
                 width: 100px;
                 height: 50px;
             }
@@ -1404,6 +1406,7 @@ p {
 
             .contact-us {
                 letter-spacing: -1px;
+
                 .tel-box {
                     .text {
                         p {

@@ -110,32 +110,15 @@ document.addEventListener("click", function (e) {
     })
 
 
-    //icons
-
-
-
+    
 
     //pages
 
     $(document).on("click", ".pages", function (e) {
         e.preventDefault();
-        $(".pages-list").removeClass("d-none");
+        $(".pages-list").toggleClass("d-none");
     })
 
-
-
-
-    //basket icon 
-
-
-
-    $(document).on("click", "#nav-area .cart", function (e) {
-        e.preventDefault()
-
-        $(".spCard-dropdown").toggleClass("d-none");
-
-
-    });
 
 
 

@@ -113,12 +113,10 @@ document.addEventListener("click", function (e) {
 
   $(document).on("click", ".pages", function (e) {
     e.preventDefault();
-    $(".pages-list").removeClass("d-none");
-  })
+    $(".pages-list").toggleClass("d-none");
+})
 
-  //basket icon 
-
-
+  
 
 
 
@@ -288,11 +286,9 @@ document.addEventListener("click", function (e) {
 
 
 
-
-
   //basket
 
-  let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
+  let cardBtns = document.querySelectorAll(".product-card .add-btn");
 
   let products = [];
 
@@ -309,7 +305,7 @@ document.addEventListener("click", function (e) {
 
       let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
       let productName = this.parentNode.parentNode.children[2].children[1].innerText;
-      let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
+      let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[1].innerText);
       let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
 
       let existProduct = products.find(m => m.id == productId);
@@ -470,6 +466,26 @@ document.addEventListener("click", function (e) {
 
 
 
+
+
+    //product detail
+
+    let productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
+
+    for (const productDetail of productsDetail) {
+      document.querySelector("#product-details .photo-product img").setAttribute("src", productDetail.img);
+      document.querySelector("#product-details .product-area .product-info h2").innerText = productDetail.name;
+      document.querySelector("#product-details .product-area .product-info del").innerText = "$" + productDetail.price;
+      document.querySelector("#product-details .product-area .product-info h3").innerText = "$" + productDetail.price / 2;
+      
+      if(products != null){
+        for (const product of products) {
+          if(product.img == productDetail.img)
+          document.querySelector(".product-count input").value = product.count;
+        }
+      }
+  
+    }
 
 
 
