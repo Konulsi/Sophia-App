@@ -372,7 +372,14 @@ p {
   margin-top: 5px;
   display: block;
 }
+#nav-area .chek-card-box .product-detail .icon {
+  cursor: pointer;
+}
+#nav-area .chek-card-box .product-detail .icon:hover i {
+  color: #d2700f;
+}
 #nav-area .chek-card-box .product-detail .icon i {
+  transition: all 0.5s;
   color: #c3c3c3;
   font-size: 17px;
   margin-top: 8px;

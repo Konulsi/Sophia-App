@@ -462,13 +462,21 @@ p {
                     display: block;
                 }
             }
-            .icon{
-                i{
+            .icon {
+                cursor: pointer;
+               
+                &:hover{
+                    i{
+                        color:  #d2700f;
+                    }
+                }
+                i {
+                    transition: all 0.5s;
                     color: #c3c3c3;
                     font-size: 17px;
                     margin-top: 8px;
                 }
-               
+
             }
         }
 
